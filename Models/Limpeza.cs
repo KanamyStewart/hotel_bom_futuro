@@ -10,10 +10,7 @@ namespace Models
     {
         public int Id { get; set; }
         public int QuartoId { get; set; }
-        public Quarto Quarto { get; set; }
         public int FuncionairoId { get; set; }
-        public Funcionario Funcionairo { get; set; }
-
         public Limpeza() { }
 
         public Limpeza(
@@ -31,7 +28,7 @@ namespace Models
 
         public override string ToString()
         {
-            return $"{this.Id}, {this.Quarto.Nome}";
+            return $"{this.Id}, {this.QuartoId}";
         }
 
         public override bool Equals(object obj)

@@ -1,24 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\eloisa.anibaletto\\Desktop\\projeto_materia_final\\hotel_bom_futuro\\aula final.csproj": {}
+    "C:\\Users\\kanamy.damiao\\Desktop\\hotel_fazenda\\aula final.csproj": {}
   },
   "projects": {
-    "C:\\Users\\eloisa.anibaletto\\Desktop\\projeto_materia_final\\hotel_bom_futuro\\aula final.csproj": {
+    "C:\\Users\\kanamy.damiao\\Desktop\\hotel_fazenda\\aula final.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\eloisa.anibaletto\\Desktop\\projeto_materia_final\\hotel_bom_futuro\\aula final.csproj",
+        "projectUniqueName": "C:\\Users\\kanamy.damiao\\Desktop\\hotel_fazenda\\aula final.csproj",
         "projectName": "aula final",
-        "projectPath": "C:\\Users\\eloisa.anibaletto\\Desktop\\projeto_materia_final\\hotel_bom_futuro\\aula final.csproj",
-        "packagesPath": "C:\\Users\\eloisa.anibaletto\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\eloisa.anibaletto\\Desktop\\projeto_materia_final\\hotel_bom_futuro\\obj\\",
+        "projectPath": "C:\\Users\\kanamy.damiao\\Desktop\\hotel_fazenda\\aula final.csproj",
+        "packagesPath": "C:\\Users\\kanamy.damiao\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\kanamy.damiao\\Desktop\\hotel_fazenda\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\eloisa.anibaletto\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\kanamy.damiao\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
