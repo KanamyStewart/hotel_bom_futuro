@@ -53,7 +53,7 @@ namespace Models
         public static void AlterarDespesa(
             int Id,
             string Descricao,
-            string Valor
+            double Valor
         )
         {
             Despesa despesa = GetDespesa(Id);

@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Repository;
 using System.Windows.Forms;
+using Models;
 
 namespace Models
 {
@@ -10,7 +11,6 @@ namespace Models
         public int Id { get; set; }
         public int QuartoId { get; set; }
         public int FuncionairoId { get; set; }
-
         public Limpeza() { }
 
         public Limpeza(
@@ -28,7 +28,7 @@ namespace Models
 
         public override string ToString()
         {
-            return $"{this.Id}, {this.Quarto.Nome}, {this.Funcionario.Nome}";
+            return $"{this.Id}, {this.Quarto.Nome}";
         }
 
         public override bool Equals(object obj)
@@ -61,7 +61,7 @@ namespace Models
             limpeza.FuncionairoId = FuncionairoId;
 
             Context db = new Context();
-            db.limpezas.Update(limpeza);
+            db.Limpezas.Update(limpeza);
             db.SaveChanges();
         }
         public static IEnumerable<Limpeza> GetLimpezas()
