@@ -9,9 +9,7 @@ namespace Models
     {
         public int Id { get; set; }
         public int QuartoId { get; set; }
-        public Quarto Quarto { get; set; }
         public int FuncionairoId { get; set; }
-        public Funcionairo Funcionairo { get; set; }
 
         public Limpeza() { }
 

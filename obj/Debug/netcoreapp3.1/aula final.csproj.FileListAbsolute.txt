@@ -38,3 +38,10 @@ C:\Users\eloisa.anibaletto\Desktop\projeto_materia_final\hotel_bom_futuro\obj\De
 C:\Users\eloisa.anibaletto\Desktop\projeto_materia_final\hotel_bom_futuro\obj\Debug\netcoreapp3.1\aula final.dll
 C:\Users\eloisa.anibaletto\Desktop\projeto_materia_final\hotel_bom_futuro\obj\Debug\netcoreapp3.1\aula final.pdb
 C:\Users\eloisa.anibaletto\Desktop\projeto_materia_final\hotel_bom_futuro\obj\Debug\netcoreapp3.1\aula final.genruntimeconfig.cache
+C:\Users\kanamy.damiao\Desktop\hotel_fazenda\obj\Debug\netcoreapp3.1\aula final.csproj.AssemblyReference.cache
+C:\Users\kanamy.damiao\Desktop\hotel_fazenda\obj\Debug\netcoreapp3.1\aula final.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kanamy.damiao\Desktop\hotel_fazenda\obj\Debug\netcoreapp3.1\aula final.AssemblyInfoInputs.cache
+C:\Users\kanamy.damiao\Desktop\hotel_fazenda\obj\Debug\netcoreapp3.1\aula final.AssemblyInfo.cs
+C:\Users\kanamy.damiao\Desktop\hotel_fazenda\obj\Debug\netcoreapp3.1\aula final.csproj.CoreCompileInputs.cache
+C:\Users\kanamy.damiao\Desktop\hotel_fazenda\obj\Debug\netcoreapp3.1\aula final.dll
+C:\Users\kanamy.damiao\Desktop\hotel_fazenda\obj\Debug\netcoreapp3.1\aula final.pdb

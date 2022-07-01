@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Repository;
 using System.Windows.Forms;
+using Models;
 
 namespace Models
 {
@@ -59,7 +60,7 @@ namespace Models
             db.FormaPagamentos.Update(formaPagamento);
             db.SaveChanges();
         }
-        public static IEnumerable<FormaPagameto> GetFormaPagametos()
+        public static IEnumerable<FormaPagameto> GetFormaPagamentos()
         {
             Context db = new Context();
             return (from FormaPagameto in db.FormaPagametos select FormaPagameto);
