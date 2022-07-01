@@ -10,23 +10,14 @@ namespace Models
     {
         public int Id { get; set; }
         public string Nome { get; set; }
-        public string Debito { get; set; }
-        public string Credito { get; set; }
-        public string Pix { get; set; }
 
         public FormaPagamento() { }
 
         public FormaPagamento(
-            string Nome,
-            string Debito,
-            string Credito,
-            string Pix
+            string Nome
         )
         {
             this.Nome = Nome;
-            this.Debito = Debito;
-            this.Credito = Credito;
-            this.Pix = Pix;
 
             Context db = new Context();
             db.FormaPagamentos.Add(this);
@@ -35,7 +26,7 @@ namespace Models
 
         public override string ToString()
         {
-            return $"{this.Id}, {this.Nome}, {this.Debito}, {this.Credito}, {this.Pix}";
+            return $"{this.Id}, {this.Nome}";
         }
 
         public override bool Equals(object obj)
@@ -59,17 +50,11 @@ namespace Models
 
         public static void AlterarFormaPagamento(
             int Id,
-            string Nome,
-            string Debito,
-            string Credito,
-            string Pix
+            string Nome
         )
         {
             FormaPagamento formaPagamento = GetFormaPagameto(Id);
             formaPagamento.Nome = Nome;
-            formaPagamento.Debito = Debito;
-            formaPagamento.Credito = Credito;
-            formaPagamento.Pix = Pix;
 
             Context db = new Context();
             db.FormaPagamentos.Update(formaPagamento);

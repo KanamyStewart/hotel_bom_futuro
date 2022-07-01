@@ -8,12 +8,12 @@ namespace Controllers
     {
         public static Despesa InserirDespesa(string Descricao, double Valor)
         {
-            if (Descricao.IsNullOrEmpty(Descricao))
+            if (String.IsNullOrEmpty(Descricao))
             {
                 throw new Exception("Descrição não pode ficar em branco!");
             }
 
-            if (Descricao.IsNullOrEmpty(Valor))
+            if(Double.IsNaN(Valor))
             {
                 throw new Exception("Valor não pode ficar em branco!");
             }
@@ -25,7 +25,7 @@ namespace Controllers
         {
             Despesa despesa = Models.Despesa.GetDespesa(Id);
 
-            if(!String.IsNullOrEmpty(Descricao) && !Double.IsNullOrEmpty(Valor))
+            if(!String.IsNullOrEmpty(Descricao) && !Double.IsNaN(Valor))
             {
                 despesa.Descricao = Descricao;
                 despesa.Valor = Valor;

@@ -8,11 +8,6 @@ namespace Controllers
     {
         public static Limpeza InserirLimpeza(int QuartoId, int FuncionairoId)
         {
-            if (Int32.IsNullOrEmpty(QuartoId) && Int32.IsNullOrEmpty(FuncionairoId))
-            {
-                throw new Exception("Por favor preencha todos os campos!");
-            }
-
             return new Limpeza(QuartoId, FuncionairoId);
         }
 
@@ -20,15 +15,8 @@ namespace Controllers
         {
             Limpeza limpeza = Models.Limpeza.GetLimpeza(Id);
 
-            if(!Int32.IsNullOrEmpty(QuartoId) && !Int32.IsNullOrEmpty(FuncionairoId))
-            {
-                Limpeza.QuartoId = QuartoId;
-                Limpeza.FuncionairoId = FuncionairoId;
-            }
-            else
-            {
-                throw new Exception("Os campos não podem ficar em branco!");
-            }
+            limpeza.QuartoId = QuartoId;
+            limpeza.FuncionairoId = FuncionairoId;
 
             Limpeza.AlterarLimpeza(Id, QuartoId, FuncionairoId);
         }

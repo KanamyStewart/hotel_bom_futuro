@@ -18,7 +18,7 @@ namespace Controllers
 
         public static void AtualizarFormaPagamento(int Id, string Nome)
         {
-            FormaPagamento formaPagamento = Models.FormaPagamento.GetFormaPagamento(Id);
+            FormaPagamento formaPagamento = Models.FormaPagamento.GetFormaPagameto(Id);
 
             if (!String.IsNullOrEmpty(Nome))
             {
@@ -29,19 +29,20 @@ namespace Controllers
                 throw new Exception("Nome não pode ficar em branco!");
             }
 
-            formaPagamento.AlterarFormaPagamento(Id, Nome);
+            FormaPagamento.AlterarFormaPagamento(Id, Nome);
         }
 
         public static FormaPagamento DeletarFormaPagamento(int Id)
         {
-            FormaPagamento formaPagamento = Models.FormaPagamento.GetFormaPagamento(Id);
-            formaPagamento.RemoverFormaPagamento(formaPagamento);
+            FormaPagamento formaPagamento = Models.FormaPagamento.GetFormaPagameto(Id);
+            FormaPagamento.RemoverFormaPagamento(formaPagamento);
+
             return formaPagamento;
         }
 
         public static IEnumerable<FormaPagamento> SelecionarFormaPagamentos()
         {
-            return Models.FormaPagamento.GetFormaPagamentos();
+            return Models.FormaPagamento.GetFormaPagametos();
         }
     }
 }

@@ -45,3 +45,36 @@ C:\Users\kanamy.damiao\Desktop\hotel_fazenda\obj\Debug\netcoreapp3.1\aula final.
 C:\Users\kanamy.damiao\Desktop\hotel_fazenda\obj\Debug\netcoreapp3.1\aula final.csproj.CoreCompileInputs.cache
 C:\Users\kanamy.damiao\Desktop\hotel_fazenda\obj\Debug\netcoreapp3.1\aula final.dll
 C:\Users\kanamy.damiao\Desktop\hotel_fazenda\obj\Debug\netcoreapp3.1\aula final.pdb
+C:\Users\kanamy.damiao\Desktop\hotel_fazenda\bin\Debug\netcoreapp3.1\aula final.exe
+C:\Users\kanamy.damiao\Desktop\hotel_fazenda\bin\Debug\netcoreapp3.1\aula final.deps.json
+C:\Users\kanamy.damiao\Desktop\hotel_fazenda\bin\Debug\netcoreapp3.1\aula final.runtimeconfig.json
+C:\Users\kanamy.damiao\Desktop\hotel_fazenda\bin\Debug\netcoreapp3.1\aula final.runtimeconfig.dev.json
+C:\Users\kanamy.damiao\Desktop\hotel_fazenda\bin\Debug\netcoreapp3.1\aula final.dll
+C:\Users\kanamy.damiao\Desktop\hotel_fazenda\bin\Debug\netcoreapp3.1\aula final.pdb
+C:\Users\kanamy.damiao\Desktop\hotel_fazenda\bin\Debug\netcoreapp3.1\BCrypt.Net-Next.dll
+C:\Users\kanamy.damiao\Desktop\hotel_fazenda\bin\Debug\netcoreapp3.1\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\kanamy.damiao\Desktop\hotel_fazenda\bin\Debug\netcoreapp3.1\Microsoft.Bcl.HashCode.dll
+C:\Users\kanamy.damiao\Desktop\hotel_fazenda\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
+C:\Users\kanamy.damiao\Desktop\hotel_fazenda\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\kanamy.damiao\Desktop\hotel_fazenda\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\kanamy.damiao\Desktop\hotel_fazenda\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\kanamy.damiao\Desktop\hotel_fazenda\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.Design.dll
+C:\Users\kanamy.damiao\Desktop\hotel_fazenda\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\kanamy.damiao\Desktop\hotel_fazenda\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\kanamy.damiao\Desktop\hotel_fazenda\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.dll
+C:\Users\kanamy.damiao\Desktop\hotel_fazenda\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\kanamy.damiao\Desktop\hotel_fazenda\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Binder.dll
+C:\Users\kanamy.damiao\Desktop\hotel_fazenda\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\kanamy.damiao\Desktop\hotel_fazenda\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\kanamy.damiao\Desktop\hotel_fazenda\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.dll
+C:\Users\kanamy.damiao\Desktop\hotel_fazenda\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\kanamy.damiao\Desktop\hotel_fazenda\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Console.dll
+C:\Users\kanamy.damiao\Desktop\hotel_fazenda\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
+C:\Users\kanamy.damiao\Desktop\hotel_fazenda\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
+C:\Users\kanamy.damiao\Desktop\hotel_fazenda\bin\Debug\netcoreapp3.1\MySqlConnector.dll
+C:\Users\kanamy.damiao\Desktop\hotel_fazenda\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\kanamy.damiao\Desktop\hotel_fazenda\bin\Debug\netcoreapp3.1\Pomelo.EntityFrameworkCore.MySql.dll
+C:\Users\kanamy.damiao\Desktop\hotel_fazenda\bin\Debug\netcoreapp3.1\Pomelo.EntityFrameworkCore.MySql.Design.dll
+C:\Users\kanamy.damiao\Desktop\hotel_fazenda\bin\Debug\netcoreapp3.1\Pomelo.JsonObject.dll
+C:\Users\kanamy.damiao\Desktop\hotel_fazenda\obj\Debug\netcoreapp3.1\aula final.csproj.CopyComplete
+C:\Users\kanamy.damiao\Desktop\hotel_fazenda\obj\Debug\netcoreapp3.1\aula final.genruntimeconfig.cache
