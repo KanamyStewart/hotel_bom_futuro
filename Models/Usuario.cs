@@ -85,5 +85,14 @@ namespace Models
             db.Usuarios.Remove(usuario);
             db.SaveChanges();
         }
+        public static void Auth(string Nome, string Senha)
+        {
+            Usuario usuario = GetUsuarios()
+                .Where(it => it.Nome == Nome && it.Senha == Senha
+                )
+                .First();
+            
+            UsuarioAuth = usuario;
+        }
     }
 }
