@@ -1,6 +1,7 @@
 //using Models;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
+using Models;
 
 namespace Repository
 {

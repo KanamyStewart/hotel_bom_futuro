@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Repository;
 using System.Windows.Forms;
+using System;
 
 namespace Models
 {
@@ -53,8 +54,7 @@ namespace Models
 
         public override string ToString()
         {
-            return $"{this.Id}, {this.Checkin}, {this.Checkout}, {this.Quarto.Nome}, {this.NomeHospede}";
-                + $"{this.DataNasc}, {this.Email}, {this.Telefone}, {this.Cpf}, {this.NomeMae}, {this.FormaPagamento.Nome}";
+            return $"{this.Id}, {this.Checkin}, {this.Checkout}, {this.Quarto.Nome}, {this.NomeHospede}, {this.DataNasc}, {this.Email}, {this.Telefone}, {this.Cpf}, {this.NomeMae}, {this.FormaPagamento.Nome}";
         }
 
         public override bool Equals(object obj)

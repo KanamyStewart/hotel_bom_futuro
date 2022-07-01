@@ -16,7 +16,7 @@ namespace Models
 
         public Usuario(
             string Nome,
-            double Senha
+            string Senha
         )
         {
             this.Nome = Nome;
@@ -54,7 +54,7 @@ namespace Models
         public static void AlterarUsuario(
             int Id,
             string Nome,
-            double Senha
+            string Senha
         )
         {
             Usuario usuario = GetUsuario(Id);

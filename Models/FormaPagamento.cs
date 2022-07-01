@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Repository;
 using System.Windows.Forms;
+using Models;
 
 namespace Models
 {
@@ -9,14 +10,23 @@ namespace Models
     {
         public int Id { get; set; }
         public string Nome { get; set; }
+        public string Debito { get; set; }
+        public string Credito { get; set; }
+        public string Pix { get; set; }
 
         public FormaPagamento() { }
 
         public FormaPagamento(
-            string Nome
+            string Nome,
+            string Debito,
+            string Credito,
+            string Pix
         )
         {
             this.Nome = Nome;
+            this.Debito = Debito;
+            this.Credito = Credito;
+            this.Pix = Pix;
 
             Context db = new Context();
             db.FormaPagamentos.Add(this);
@@ -25,7 +35,7 @@ namespace Models
 
         public override string ToString()
         {
-            return $"{this.Id}, {this.Nome}";
+            return $"{this.Id}, {this.Nome}, {this.Debito}, {this.Credito}, {this.Pix}";
         }
 
         public override bool Equals(object obj)
@@ -49,25 +59,31 @@ namespace Models
 
         public static void AlterarFormaPagamento(
             int Id,
-            string Nome
+            string Nome,
+            string Debito,
+            string Credito,
+            string Pix
         )
         {
-            FormaPagamento formaPagamento = GetFormaPagamento(Id);
+            FormaPagamento formaPagamento = GetFormaPagameto(Id);
             formaPagamento.Nome = Nome;
+            formaPagamento.Debito = Debito;
+            formaPagamento.Credito = Credito;
+            formaPagamento.Pix = Pix;
 
             Context db = new Context();
             db.FormaPagamentos.Update(formaPagamento);
             db.SaveChanges();
         }
-        public static IEnumerable<FormaPagameto> GetFormaPagametos()
+        public static IEnumerable<FormaPagamento> GetFormaPagametos()
         {
             Context db = new Context();
-            return (from FormaPagameto in db.FormaPagametos select FormaPagameto);
+            return (from FormaPagameto in db.FormaPagamentos select FormaPagameto);
         }
-        public static FormaPagameto GetFormaPagameto(int Id)
+        public static FormaPagamento GetFormaPagameto(int Id)
         {
             Context db = new Context();
-            IEnumerable<FormaPagameto> formaPagamentos = from FormaPagamento in db.FormaPagamentos
+            IEnumerable<FormaPagamento> formaPagamentos = from FormaPagamento in db.FormaPagamentos
                                             where FormaPagamento.Id == Id
                                             select FormaPagamento;
 
