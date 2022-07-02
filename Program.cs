@@ -1,4 +1,7 @@
 using System;
+using System.Windows.Forms;
+//using Controllers;
+using Views;
 
 namespace aula_final
 {
@@ -6,7 +9,8 @@ namespace aula_final
     {
         public static void Main(string[] args)
         {
-            //CreateHostBuilder(args).Build().Run();
+            Application.EnableVisualStyles();
+            Application.Run(new Menu());
         }
     }
 }
