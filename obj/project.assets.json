@@ -5449,25 +5449,25 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\eloisa.anibaletto\\.nuget\\packages\\": {},
+    "C:\\Users\\refeson.pinho\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
     "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\eloisa.anibaletto\\Desktop\\projeto_materia_final\\hotel_bom_futuro\\aula final.csproj",
+      "projectUniqueName": "C:\\Users\\refeson.pinho\\Pictures\\hotel_bom_futuro\\aula final.csproj",
       "projectName": "aula final",
-      "projectPath": "C:\\Users\\eloisa.anibaletto\\Desktop\\projeto_materia_final\\hotel_bom_futuro\\aula final.csproj",
-      "packagesPath": "C:\\Users\\eloisa.anibaletto\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\eloisa.anibaletto\\Desktop\\projeto_materia_final\\hotel_bom_futuro\\obj\\",
+      "projectPath": "C:\\Users\\refeson.pinho\\Pictures\\hotel_bom_futuro\\aula final.csproj",
+      "packagesPath": "C:\\Users\\refeson.pinho\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\refeson.pinho\\Pictures\\hotel_bom_futuro\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
         "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\eloisa.anibaletto\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\refeson.pinho\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
