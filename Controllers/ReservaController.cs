@@ -34,7 +34,7 @@ namespace Controllers
             }
             try
             {
-                FormaPagamentoController.GetFormaPagamento(FormaPagamentoId);
+                Models.FormaPagamento.GetFormaPagamento(FormaPagamentoId);
             }
             catch
             {
@@ -69,7 +69,7 @@ namespace Controllers
             }
             try
             {
-                FormaPagamentoController.GetFormaPagamento(FormaPagamentoId);
+                Models.FormaPagamento.GetFormaPagamento(FormaPagamentoId);
             }
             catch
             {
@@ -115,9 +115,27 @@ namespace Controllers
 
             return reserva;
         }
-        public static void CalcularReserva(Reserva viewModel)
+        public static Double CalcularReserva(int Id)
         {
+            var reserva_atual = Models.Reserva.GetReserva(Id);
+            var dChegada = reserva_atual.Checkin;
+            var dSaida = reserva_atual.Checkout;
+            var vlrdiaria = 0;
 
+            for (var curDate = dChegada; curDate < dSaida; curDate = curDate.AddDays(1))
+            {
+                vlrdiaria += Convert.ToInt32(ValorDiaria(curDate));
+            }
+
+            return 0.0 ;
+        }
+
+        public static Double ValorDiaria(int Id)
+        {
+            var quarto = Models.Quarto.GetQuarto(Id);
+            var valorDiaria = quarto.Valor;
+
+            return valorDiaria;
         }
     }
 }

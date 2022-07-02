@@ -18,7 +18,7 @@ namespace Controllers
 
         public static void AtualizarFormaPagamento(int Id, string Nome)
         {
-            FormaPagamento formaPagamento = Models.FormaPagamento.GetFormaPagameto(Id);
+            FormaPagamento formaPagamento = Models.FormaPagamento.GetFormaPagamento(Id);
 
             if (!String.IsNullOrEmpty(Nome))
             {
@@ -34,7 +34,7 @@ namespace Controllers
 
         public static FormaPagamento DeletarFormaPagamento(int Id)
         {
-            FormaPagamento formaPagamento = Models.FormaPagamento.GetFormaPagameto(Id);
+            FormaPagamento formaPagamento = Models.FormaPagamento.GetFormaPagamento(Id);
             FormaPagamento.RemoverFormaPagamento(formaPagamento);
 
             return formaPagamento;
@@ -42,7 +42,7 @@ namespace Controllers
 
         public static IEnumerable<FormaPagamento> SelecionarFormaPagamentos()
         {
-            return Models.FormaPagamento.GetFormaPagametos();
+            return Models.FormaPagamento.GetFormaPagamentos();
         }
     }
 }

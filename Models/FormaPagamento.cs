@@ -53,19 +53,19 @@ namespace Models
             string Nome
         )
         {
-            FormaPagamento formaPagamento = GetFormaPagameto(Id);
+            FormaPagamento formaPagamento = GetFormaPagamento(Id);
             formaPagamento.Nome = Nome;
 
             Context db = new Context();
             db.FormaPagamentos.Update(formaPagamento);
             db.SaveChanges();
         }
-        public static IEnumerable<FormaPagamento> GetFormaPagametos()
+        public static IEnumerable<FormaPagamento> GetFormaPagamentos()
         {
             Context db = new Context();
-            return (from FormaPagameto in db.FormaPagamentos select FormaPagameto);
+            return (from FormaPagamento in db.FormaPagamentos select FormaPagamento);
         }
-        public static FormaPagamento GetFormaPagameto(int Id)
+        public static FormaPagamento GetFormaPagamento(int Id)
         {
             Context db = new Context();
             IEnumerable<FormaPagamento> formaPagamentos = from FormaPagamento in db.FormaPagamentos
