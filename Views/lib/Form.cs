@@ -1,7 +1,8 @@
 using System.Windows.Forms;
 using System.Drawing;
 
-namespace Views.Lib {
+namespace Views.Lib 
+{
     public enum SizeScreen
     {
         Small,
@@ -35,7 +36,7 @@ namespace Views.Lib {
             }
             this.Text = Title;
             this.StartPosition = FormStartPosition.CenterScreen;
-            this.BackColor = Color.LightCyan;
+            this.BackColor = Color.FromArgb(249, 250, 252);
         }
     }
 }
