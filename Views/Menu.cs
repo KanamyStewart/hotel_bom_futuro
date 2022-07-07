@@ -18,7 +18,7 @@ namespace Views
         {            
             btnClient =  new Campos.ButtonForm(this.Controls,"Hóspede", 30, 30, this.handleClient);
             btnAdmin =  new Campos.ButtonForm(this.Controls,"Administrador", 170, 30, this.handleAdmin);
-            btnExit = new Campos.ButtonForm(this.Controls,"Sair", 100, 130, this.handleExit);
+            btnExit = new Campos.ButtonForm(this.Controls,"Sair", 100, 130, this.handleCancel);
 
             this.Controls.Add(btnClient);
             this.Controls.Add(btnAdmin);
@@ -31,12 +31,15 @@ namespace Views
         }
         private void handleAdmin(object sender, EventArgs e)
         {
-            Menu menu = new Menu();
-            menu.ShowDialog();
+            (new Login(this)).Show();
+            this.Hide();
         }
-        private void handleExit(object sender, EventArgs e)
+         private void handleCancel(object sender, EventArgs e)
         {
-           
+            if (MessageBox.Show(" Deseja mesmo sair? ", "Mensage do sistema ", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
     }
 }
