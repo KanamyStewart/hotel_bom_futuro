@@ -1,14 +1,14 @@
 using System.Windows.Forms;
 using Views;
 
-namespace EncryptMe
+namespace HOTEL_BOM_FUTURO
 {
     public class Program
     {
         public static void Main(string[] args)
         {
             Application.EnableVisualStyles();
-            Application.Run(new Login());
+            Application.Run(new Menu());
         }
     }
 }
