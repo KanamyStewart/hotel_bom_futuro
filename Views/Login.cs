@@ -6,7 +6,7 @@ using Models;
 
 namespace Views
 {
-    
+
     public class Login : Form
     {
         Form parent;

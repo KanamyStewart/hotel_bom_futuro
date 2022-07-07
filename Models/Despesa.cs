@@ -8,23 +8,23 @@ namespace Models
     public class Despesa
     {
         public int Id { get; set; }
-        public int Quarto { get; set; }
+        public int QuartoId { get; set; }
+        public Quarto Quarto { get; set; }
         public double ValorTotal { get; set; }
         public int Quantidade { get; set; }
         public int ProdutoId { get; set; }
         public Produto Produto { get; set; }
         
-
         public Despesa() { }
 
         public Despesa(
-            int Quarto,
+            int QuartoId,
             double ValorTotal,
             int ProdutoId,
             int Quantidade
         )
         {
-            this.Quarto = Quarto;
+            this.QuartoId = QuartoId;
             this.ValorTotal = ValorTotal;
             this.ProdutoId = ProdutoId;
             this.Quantidade = Quantidade;
@@ -36,7 +36,7 @@ namespace Models
 
         public override string ToString()
         {
-            return $" {this.Id}, {this.Quarto}, {this.ValorTotal}, {this.Quantidade}";
+            return $" {this.Id}, {this.Quarto.Numero}, {this.ValorTotal}, {this.Produto.Nome}, {this.Quantidade}, {this.Produto.Valor}";
         }
 
         public override bool Equals(object obj)
@@ -60,14 +60,14 @@ namespace Models
 
         public static void AlterarDespesa(
             int Id,
-            int Quarto,
+            int QuartoId,
             double ValorTotal,
             int ProdutoId,
             int Quantidade
         )
         {
             Despesa despesa = GetDespesa(Id);
-            despesa.Quarto = Quarto;
+            despesa.QuartoId = QuartoId;
             despesa.ValorTotal = ValorTotal;
             despesa.ProdutoId = ProdutoId;
             despesa.Quantidade = Quantidade;
