@@ -1,30 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\kanam\\OneDrive\\Área de Trabalho\\hotel\\hotel_bom_futuro\\aula final.csproj": {}
+    "C:\\Users\\refes\\OneDrive\\Imagens\\Projeto\\hotel_bom_futuro\\aula final.csproj": {}
   },
   "projects": {
-    "C:\\Users\\kanam\\OneDrive\\Área de Trabalho\\hotel\\hotel_bom_futuro\\aula final.csproj": {
+    "C:\\Users\\refes\\OneDrive\\Imagens\\Projeto\\hotel_bom_futuro\\aula final.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\kanam\\OneDrive\\Área de Trabalho\\hotel\\hotel_bom_futuro\\aula final.csproj",
+        "projectUniqueName": "C:\\Users\\refes\\OneDrive\\Imagens\\Projeto\\hotel_bom_futuro\\aula final.csproj",
         "projectName": "aula final",
-        "projectPath": "C:\\Users\\kanam\\OneDrive\\Área de Trabalho\\hotel\\hotel_bom_futuro\\aula final.csproj",
-        "packagesPath": "C:\\Users\\kanam\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\kanam\\OneDrive\\Área de Trabalho\\hotel\\hotel_bom_futuro\\obj\\",
+        "projectPath": "C:\\Users\\refes\\OneDrive\\Imagens\\Projeto\\hotel_bom_futuro\\aula final.csproj",
+        "packagesPath": "C:\\Users\\refes\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\refes\\OneDrive\\Imagens\\Projeto\\hotel_bom_futuro\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\kanam\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\refes\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -79,7 +74,7 @@
           "downloadDependencies": [
             {
               "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[3.1.23, 3.1.23]"
+              "version": "[3.1.21, 3.1.21]"
             }
           ],
           "frameworkReferences": {
@@ -90,7 +85,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }
