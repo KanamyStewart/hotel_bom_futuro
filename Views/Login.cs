@@ -7,15 +7,15 @@ using Models;
 namespace Views
 {
     public delegate void HandleButton(object sender, EventArgs e);
-    static class Program
-    {
-        [STAThread]
-        static void Main()
-        {
-            Application.EnableVisualStyles();
-            Application.Run(new Login());
-        }
-    }
+   //static class Program
+    ///{
+        //[STAThread]
+        //static void Main()
+        //{
+           // Application.EnableVisualStyles();
+            //Application.Run(new Login());
+       // }
+     //}
 
     public class Login : Form
     {
