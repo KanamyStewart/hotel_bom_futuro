@@ -6,36 +6,22 @@ namespace Controllers
 {
     public class DespesaController
     {
-        public static Despesa InserirDespesa(string Descricao, double Valor)
+        public static Despesa InserirDespesa(int ProdutoId, int ReservaId)
         {
-            if (String.IsNullOrEmpty(Descricao))
-            {
-                throw new Exception("Descrição não pode ficar em branco!");
-            }
+            ProdutoController.GetProduto(ProdutoId);
+            ProdutoController.GetProduto(ReservaId);
 
-            if(Double.IsNaN(Valor))
-            {
-                throw new Exception("Valor não pode ficar em branco!");
-            }
-
-            return new Despesa(Descricao, Valor);
+            return new Despesa(ProdutoId, ReservaId);
         }
 
-        public static void AtualizarDespesa(int Id, string Descricao, double Valor)
+        public static void AtualizarDespesa(int Id, int ProdutoId, int ReservaId)
         {
             Despesa despesa = Models.Despesa.GetDespesa(Id);
 
-            if(!String.IsNullOrEmpty(Descricao) && !Double.IsNaN(Valor))
-            {
-                despesa.Descricao = Descricao;
-                despesa.Valor = Valor;
-            }
-            else
-            {
-                throw new Exception("Descrição e valor não pode ficar em branco!");
-            }
+            ProdutoController.GetProduto(ProdutoId);
+            ProdutoController.GetProduto(ReservaId);
 
-            Despesa.AlterarDespesa(Id, Descricao, Valor);
+            Despesa.AlterarDespesa(Id, ProdutoId, ReservaId);
         }
 
         public static Despesa DeletarDespesa(int Id)
