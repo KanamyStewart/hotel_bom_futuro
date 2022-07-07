@@ -7,23 +7,23 @@ namespace Controllers
 {
     public class DespesaController
     {
-        public static Despesa InserirDespesa(int Quarto, double ValorTotal,int ProdutoId,int Quantidade)
+        public static Despesa InserirDespesa(int QuartoId, double ValorTotal,int ProdutoId,int Quantidade)
         {
             if(Double.IsNaN(ValorTotal))
             {
                 throw new Exception("Valor não pode ficar em branco!");
             }
 
-            return new Despesa(Quarto,ValorTotal,ProdutoId,Quantidade);
+            return new Despesa(QuartoId,ValorTotal,ProdutoId,Quantidade);
         }
 
-        public static void AtualizarDespesa(int Id,int Quarto, double ValorTotal,int ProdutoId,int Quantidade)
+        public static void AtualizarDespesa(int Id,int QuartoId, double ValorTotal,int ProdutoId,int Quantidade)
         {
             Despesa despesa = GetDespesa(Id);
 
             if(Double.IsNaN(ValorTotal))
            
-            Despesa.AlterarDespesa(Id, Quarto,ValorTotal,ProdutoId,Quantidade);
+            Despesa.AlterarDespesa(Id, QuartoId, ValorTotal, ProdutoId, Quantidade);
         }
 
         public static Despesa DeletarDespesa(int Id)
