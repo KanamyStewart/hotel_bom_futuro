@@ -125,3 +125,36 @@ C:\Users\kanam\OneDrive\Área de Trabalho\hotel\hotel_bom_futuro\bin\Debug\netco
 C:\Users\kanam\OneDrive\Área de Trabalho\hotel\hotel_bom_futuro\bin\Debug\netcoreapp3.1\Pomelo.JsonObject.dll
 C:\Users\kanam\OneDrive\Área de Trabalho\hotel\hotel_bom_futuro\obj\Debug\netcoreapp3.1\aula final.csproj.CopyComplete
 C:\Users\kanam\OneDrive\Área de Trabalho\hotel\hotel_bom_futuro\obj\Debug\netcoreapp3.1\aula final.genruntimeconfig.cache
+C:\Users\refes\OneDrive\Imagens\Projeto\hotel_bom_futuro\bin\Debug\netcoreapp3.1\aula final.exe
+C:\Users\refes\OneDrive\Imagens\Projeto\hotel_bom_futuro\bin\Debug\netcoreapp3.1\aula final.deps.json
+C:\Users\refes\OneDrive\Imagens\Projeto\hotel_bom_futuro\bin\Debug\netcoreapp3.1\aula final.runtimeconfig.json
+C:\Users\refes\OneDrive\Imagens\Projeto\hotel_bom_futuro\bin\Debug\netcoreapp3.1\aula final.runtimeconfig.dev.json
+C:\Users\refes\OneDrive\Imagens\Projeto\hotel_bom_futuro\bin\Debug\netcoreapp3.1\aula final.dll
+C:\Users\refes\OneDrive\Imagens\Projeto\hotel_bom_futuro\bin\Debug\netcoreapp3.1\aula final.pdb
+C:\Users\refes\OneDrive\Imagens\Projeto\hotel_bom_futuro\bin\Debug\netcoreapp3.1\BCrypt.Net-Next.dll
+C:\Users\refes\OneDrive\Imagens\Projeto\hotel_bom_futuro\bin\Debug\netcoreapp3.1\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\refes\OneDrive\Imagens\Projeto\hotel_bom_futuro\bin\Debug\netcoreapp3.1\Microsoft.Bcl.HashCode.dll
+C:\Users\refes\OneDrive\Imagens\Projeto\hotel_bom_futuro\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
+C:\Users\refes\OneDrive\Imagens\Projeto\hotel_bom_futuro\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\refes\OneDrive\Imagens\Projeto\hotel_bom_futuro\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\refes\OneDrive\Imagens\Projeto\hotel_bom_futuro\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\refes\OneDrive\Imagens\Projeto\hotel_bom_futuro\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.Design.dll
+C:\Users\refes\OneDrive\Imagens\Projeto\hotel_bom_futuro\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\refes\OneDrive\Imagens\Projeto\hotel_bom_futuro\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\refes\OneDrive\Imagens\Projeto\hotel_bom_futuro\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.dll
+C:\Users\refes\OneDrive\Imagens\Projeto\hotel_bom_futuro\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\refes\OneDrive\Imagens\Projeto\hotel_bom_futuro\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Binder.dll
+C:\Users\refes\OneDrive\Imagens\Projeto\hotel_bom_futuro\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\refes\OneDrive\Imagens\Projeto\hotel_bom_futuro\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\refes\OneDrive\Imagens\Projeto\hotel_bom_futuro\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.dll
+C:\Users\refes\OneDrive\Imagens\Projeto\hotel_bom_futuro\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\refes\OneDrive\Imagens\Projeto\hotel_bom_futuro\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Console.dll
+C:\Users\refes\OneDrive\Imagens\Projeto\hotel_bom_futuro\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
+C:\Users\refes\OneDrive\Imagens\Projeto\hotel_bom_futuro\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
+C:\Users\refes\OneDrive\Imagens\Projeto\hotel_bom_futuro\bin\Debug\netcoreapp3.1\MySqlConnector.dll
+C:\Users\refes\OneDrive\Imagens\Projeto\hotel_bom_futuro\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\refes\OneDrive\Imagens\Projeto\hotel_bom_futuro\bin\Debug\netcoreapp3.1\Pomelo.EntityFrameworkCore.MySql.dll
+C:\Users\refes\OneDrive\Imagens\Projeto\hotel_bom_futuro\bin\Debug\netcoreapp3.1\Pomelo.EntityFrameworkCore.MySql.Design.dll
+C:\Users\refes\OneDrive\Imagens\Projeto\hotel_bom_futuro\bin\Debug\netcoreapp3.1\Pomelo.JsonObject.dll
+C:\Users\refes\OneDrive\Imagens\Projeto\hotel_bom_futuro\obj\Debug\netcoreapp3.1\aula final.csproj.CopyComplete
+C:\Users\refes\OneDrive\Imagens\Projeto\hotel_bom_futuro\obj\Debug\netcoreapp3.1\aula final.genruntimeconfig.cache

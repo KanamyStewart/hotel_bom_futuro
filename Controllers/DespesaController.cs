@@ -1,27 +1,29 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using Models;
 
 namespace Controllers
 {
     public class DespesaController
     {
-        public static Despesa InserirDespesa(int ProdutoId, int ReservaId)
+        public static Despesa InserirDespesa(int Quarto, double ValorTotal,int ProdutoId,int Quantidade)
         {
-            ProdutoController.GetProduto(ProdutoId);
-            ProdutoController.GetProduto(ReservaId);
+            if(Double.IsNaN(ValorTotal))
+            {
+                throw new Exception("Valor não pode ficar em branco!");
+            }
 
-            return new Despesa(ProdutoId, ReservaId);
+            return new Despesa(Quarto,ValorTotal,ProdutoId,Quantidade);
         }
 
-        public static void AtualizarDespesa(int Id, int ProdutoId, int ReservaId)
+        public static void AtualizarDespesa(int Id,int Quarto, double ValorTotal,int ProdutoId,int Quantidade)
         {
-            Despesa despesa = Models.Despesa.GetDespesa(Id);
+            Despesa despesa = GetDespesa(Id);
 
-            ProdutoController.GetProduto(ProdutoId);
-            ProdutoController.GetProduto(ReservaId);
-
-            Despesa.AlterarDespesa(Id, ProdutoId, ReservaId);
+            if(Double.IsNaN(ValorTotal))
+           
+            Despesa.AlterarDespesa(Id, Quarto,ValorTotal,ProdutoId,Quantidade);
         }
 
         public static Despesa DeletarDespesa(int Id)
@@ -31,9 +33,37 @@ namespace Controllers
             return despesa;
         }
 
+        public static IEnumerable<Despesa> GetDespesas()
+        {
+            return Despesa.GetDespesas();
+        }
+
+        public static Despesa GetDespesa(int Id)
+        {
+            try 
+            {
+                Despesa despesa = (
+                    from Despesa in Despesa.GetDespesas()
+                        where Despesa.Id == Id
+                        select Despesa
+                ).First();
+
+                if (despesa == null)
+                {
+                    throw new Exception("Categoria não encontrada");
+                }
+
+                return despesa;
+            }
+            catch
+            {
+                throw new Exception("Categoria não encontrada");
+            }
+        }
+
         public static IEnumerable<Despesa> SelecionarDespesas()
         {
-            return Models.Despesa.GetDespesas();
+            return Despesa.GetDespesas();
         }
     }
 }
