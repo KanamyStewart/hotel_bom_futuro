@@ -124,7 +124,7 @@ namespace Controllers
 
             for (var curDate = dChegada; curDate < dSaida; curDate = curDate.AddDays(1))
             {
-                vlrdiaria += Convert.ToInt32(ValorDiaria(curDate));
+                //vlrdiaria += Convert.ToInt32(ValorDiaria(curDate));
             }
 
             return 0.0 ;
