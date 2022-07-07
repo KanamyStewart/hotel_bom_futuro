@@ -32,6 +32,10 @@ namespace Models
             db.SaveChanges();
         }
 
+        public string ToSuggestion() {
+            return $"{this.Id} - {this.Nome}, {this.Numero}, {this.Descricao},  {this.Valor}";
+        }
+
         public override string ToString()
         {
             return $"{this.Id}, {this.Nome}, {this.Numero}, {this.Descricao}, {this.Valor}";

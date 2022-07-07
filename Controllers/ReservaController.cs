@@ -120,7 +120,7 @@ namespace Controllers
             var reserva_atual = Models.Reserva.GetReserva(Id);
             var dChegada = reserva_atual.Checkin;
             var dSaida = reserva_atual.Checkout;
-            var vlrdiaria = 0;
+            //var vlrdiaria = 0;
 
             for (var curDate = dChegada; curDate < dSaida; curDate = curDate.AddDays(1))
             {
