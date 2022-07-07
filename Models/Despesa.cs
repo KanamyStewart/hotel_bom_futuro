@@ -8,18 +8,18 @@ namespace Models
     public class Despesa
     {
         public int Id { get; set; }
-        public string Descricao { get; set; }
-        public double Valor { get; set; }
+        public int ProdutoId { get; set; }
+        public int ReservaId { get; set; }
 
         public Despesa() { }
 
         public Despesa(
-            string Descricao,
-            double Valor
+            int ProdutoId,
+            int ReservaId
         )
         {
-            this.Descricao = Descricao;
-            this.Valor = Valor;
+            this.ProdutoId = ProdutoId;
+            this.ReservaId = ReservaId;
 
             Context db = new Context();
             db.Despesas.Add(this);
@@ -28,7 +28,7 @@ namespace Models
 
         public override string ToString()
         {
-            return $" {this.Id}, {this.Descricao}, {this.Valor}";
+            return $" {this.Id}, {this.ProdutoId}, {this.ReservaId}";
         }
 
         public override bool Equals(object obj)
@@ -52,13 +52,13 @@ namespace Models
 
         public static void AlterarDespesa(
             int Id,
-            string Descricao,
-            double Valor
+            int ProdutoId,
+            int ReservaId
         )
         {
             Despesa despesa = GetDespesa(Id);
-            despesa.Descricao = Descricao;
-            despesa.Valor = Valor;
+            despesa.ProdutoId = ProdutoId;
+            despesa.ReservaId = ReservaId;
 
             Context db = new Context();
             db.Despesas.Update(despesa);
