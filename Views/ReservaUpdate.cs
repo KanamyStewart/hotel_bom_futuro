@@ -43,50 +43,50 @@ namespace Views
             this.parent = parent;
             this.parent.Hide();
 
-            this.ClientSize = new System.Drawing.Size(400,800);
+            this.ClientSize = new System.Drawing.Size(400,700);
 
              this.lblId = new Label
             {
                 Text = " Id para Alterar",
-                Location = new Point(120, 20),
+                Location = new Point(120, 01),
                 Size = new Size(240, 15)
             };
 
             textId = new TextBox
             {
-                Location = new Point(10, 45),
+                Location = new Point(10, 20),
                 Size = new Size(360, 20)
             };
 
             this.lblCheckin = new Label
             {
                 Text = " Checkin ",
-                Location = new Point(120, 70),
+                Location = new Point(120, 40),
                 Size = new Size(240, 15)
             };
 
             textCheckin = new TextBox
             {
-                Location = new Point(10, 95),
+                Location = new Point(10, 65),
                 Size = new Size(360, 20)
             };
 
             this.lblCheckout = new Label
             {
                 Text = " Checkout",
-                Location = new Point(120, 120)
+                Location = new Point(120, 85)
             };
 
             textCheckout = new TextBox
             {
-                Location = new Point(10, 145),
+                Location = new Point(10, 105),
                 Size = new Size(360, 20)
             };
 
             this.lblQuarto = new Label
             {
                 Text = " Quarto",
-                Location = new Point(120, 170)
+                Location = new Point(120, 125)
             };
 
             // Create and initialize a CheckBox.
@@ -96,7 +96,7 @@ namespace Views
                 .Select(Quarto => Quarto.ToSuggestion())
                 .ToArray();
             this.checkListBoxQuarto = new CheckedListBox{
-                Location = new Point(10, 195),
+                Location = new Point(10, 145),
                 Size = new Size(360, 100),
                 
             };
@@ -106,81 +106,81 @@ namespace Views
             this.lblNomeHospede = new Label
             {
                 Text = " Nome do Hospede",
-                Location = new Point(120, 290),
+                Location = new Point(120, 235),
                 Size = new Size(360,20)
             };
 
             textNomeHospede = new TextBox
             {
-                Location = new Point(10, 315),
+                Location = new Point(10, 260),
                 Size = new Size(360, 20)
             };
 
             this.lblDataNasc = new Label
             {
                 Text = " Data de Nascimento",
-                Location = new Point(120, 340),
+                Location = new Point(120, 275),
                 Size = new Size(360,20)
             };
 
             textDataNasc= new TextBox
             {
-                Location = new Point(10, 365),
+                Location = new Point(10, 300),
                 Size = new Size(360, 20)
             };
 
             this.lblEmail = new Label
             {
                 Text = " Email",
-                Location = new Point(120, 390)
+                Location = new Point(120, 325)
             };
 
             textEmail= new TextBox
             {
-                Location = new Point(10, 415),
+                Location = new Point(10, 350),
                 Size = new Size(360, 20)
             };
 
             this.lblTelefone = new Label
             {
                 Text = " Telefone",
-                Location = new Point(120, 440)
+                Location = new Point(120, 375)
             };
 
             textTelefone= new TextBox
             {
-                Location = new Point(10, 465),
+                Location = new Point(10, 400),
                 Size = new Size(360, 20)
             };
 
             this.lblCpf = new Label
             {
                 Text = " CPF",
-                Location = new Point(120, 490)
+                Location = new Point(120, 425)
             };
 
             textCpf= new TextBox
             {
-                Location = new Point(10, 515),
+                Location = new Point(10, 450),
                 Size = new Size(360, 20)
             };
 
             this.lblNomeMae = new Label
             {
                 Text = " Nome da Mãe",
-                Location = new Point(120, 540)
+                Location = new Point(120, 475)
             };
 
             textNomeMae= new TextBox
             {
-                Location = new Point(10, 565),
+                Location = new Point(10, 500),
                 Size = new Size(360, 20)
             };
 
              this.lblFormaPagamento = new Label
             {
                 Text = " Forma de Pagamento",
-                Location = new Point(120, 590),
+                Location = new Point(120, 525),
                 Size = new Size(360,20)
             };
 
@@ -191,18 +191,15 @@ namespace Views
                 .Select(Quarto => Quarto.ToSuggestion())
                 .ToArray();
             this.checkListBoxFormaPagamento = new CheckedListBox{
-                Location = new Point(10, 615),
+                Location = new Point(10, 550),
                 Size = new Size(360, 100),
                 
             };
             checkListBoxFormaPagamento.Items.AddRange(formaPagamentoSuggestion);
 
 
-
-     
-
-            this.btnConfirm1 = new Campos.ButtonForm(this.Controls,"Confirmar", 80,720, this.handleConfirmClick);
-            this.btnCancel1 = new  Campos.ButtonForm(this.Controls,"Cancelar", 190, 720, this.handleCancelClick);
+            this.btnConfirm1 = new Campos.ButtonForm(this.Controls,"Confirmar", 80,650, this.handleConfirmClick);
+            this.btnCancel1 = new  Campos.ButtonForm(this.Controls,"Cancelar", 190, 650, this.handleCancelClick);
 
             this.Controls.Add(this.lblId);
             this.Controls.Add(this.textId);
