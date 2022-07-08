@@ -7,13 +7,12 @@ using static lib.Campos;
 using lib;
 using Models;
 
-
 namespace Views
 {
     public class ProdutoUpdate : BaseForm
     {
         public delegate void HandleButton(object sender, EventArgs e);
-
+        Form parent;
         Label lblId;
         TextBox textId;
         Label lblNome;
@@ -23,8 +22,11 @@ namespace Views
         Button btnConfirm1;
         Button btnCancel1;
 
-        public ProdutoUpdate() : base("Alterar Produto")
+        public ProdutoUpdate(AdminMenu parent) : base("Alterar Produto")
         {
+
+            this.parent = parent;
+            this.parent.Hide();
 
             this.lblId = new Label
             {
@@ -108,8 +110,8 @@ namespace Views
                 );
 
                 MessageBox.Show("Dados alterados com sucesso.");
-                Views.ProdutoMenu menu = new Views.ProdutoMenu();
-                this.Close();
+                this.parent.Show();
+                this.Close(); 
 
             }
             catch (System.Exception err)
@@ -120,8 +122,8 @@ namespace Views
         
         private void handleCancelClick(object sender, EventArgs e)
         {
-            Views.Menu menu = new Views.Menu();
-            this.Close();
+            this.parent.Show();
+            this.Close(); 
         }  
     }       
 }
