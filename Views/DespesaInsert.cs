@@ -12,6 +12,7 @@ namespace Views
     {
         public delegate void HandleButton(object sender, EventArgs e);
 
+        Form parent;
         readonly Label lblQuarto;
         readonly TextBox textQuarto;
         readonly Label lblValorTotal;
@@ -23,8 +24,11 @@ namespace Views
         readonly Button btnConfirm1;
         readonly Button btnCancel1;
 
-        public DespesaInsert() : base("Despesas")
+        public DespesaInsert(DespesaMenu parent) : base("Despesas")
         {
+            this.parent = parent;
+            this.parent.Hide();
+
             this.ClientSize = new System.Drawing.Size(400,300);
 
             this.lblQuarto = new Label
@@ -155,8 +159,8 @@ namespace Views
                 }
 
                 MessageBox.Show("Dados inseridos com sucesso.");
-                   DespesaMenu menu = new DespesaMenu();
-                    this.Close();
+                   this.parent.Show();
+                   this.Close();
 
             }
             catch
@@ -167,8 +171,8 @@ namespace Views
 
         private void handleCancelClick(object sender, EventArgs e)
         {
-            Views.Menu menu = new Views.Menu();
-            this.Close();
+            this.parent.Show();
+            this.Close();  
         }  
     }       
 }
