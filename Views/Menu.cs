@@ -16,9 +16,9 @@ namespace Views
         
         public Menu() : base("Menu principal")
         {            
-            btnClient =  new Campos.ButtonForm(this.Controls,"Hóspede", 30, 30, this.handleClient);
-            btnAdmin =  new Campos.ButtonForm(this.Controls,"Administrador", 170, 30, this.handleAdmin);
-            btnExit = new Campos.ButtonForm(this.Controls,"Sair", 100, 130, this.handleCancel);
+            btnClient =  new Campos.ButtonForm(this.Controls,"Hóspede", 100, 50, this.handleClient);
+            btnAdmin =  new Campos.ButtonForm(this.Controls,"Administrador", 100, 100, this.handleAdmin);
+            btnExit = new Campos.ButtonForm(this.Controls,"Sair", 100, 150, this.handleCancel);
 
             this.Controls.Add(btnClient);
             this.Controls.Add(btnAdmin);
@@ -26,8 +26,8 @@ namespace Views
         }
         private void handleClient(object sender, EventArgs e)
         {
-            //(new Hospede(this)).Show();
-            //this.Hide();
+            (new ReservaMenu(this)).Show();
+            this.Hide();
         }
         private void handleAdmin(object sender, EventArgs e)
         {
