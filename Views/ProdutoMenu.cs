@@ -11,14 +11,19 @@ namespace Views
 {
     public class ProdutoMenu : BaseForm
     {
+        Form parent;
+        public ListView listView;
         readonly Button btnInsert;
         readonly Button btnAlterar;
         readonly Button btnExcluir;
         readonly Button btnVoltar;
         internal static readonly object listSenha;
 
-        public ProdutoMenu() : base(" Produtos")
+        public ProdutoMenu(AdminMenu parent) : base(" Produtos")
         {
+            this.parent = parent;
+            this.parent.Hide();
+
             ListView listView = new ListView
             {
                 Dock = DockStyle.Fill,
@@ -97,26 +102,45 @@ namespace Views
             }
         private void handleInsertClick(object sender, EventArgs e)
         {
-            Views.ProdutoInsert menu = new Views.ProdutoInsert();
-            menu.ShowDialog();
+            (new ProdutoInsert(this)).Show();
+                this.Hide();
         }
 
         private void handleAlterarClick(object sender, EventArgs e)
         {
-           Views.ProdutoUpdate menu = new Views.ProdutoUpdate();
-            //menu.ShowDialog();
+           //(new ProdutoUpdate(this)).Show();
+                this.Hide();
         }
         private void handleExcluirClick(object sender, EventArgs e)
         {
-            Views.ProdutoDelete menu = new Views.ProdutoDelete();
-            menu.ShowDialog();
+            if (this.listView.SelectedItems.Count > 0)
+            {
+                int id = Convert.ToInt32(this.listView.SelectedItems[0].Text);
+                DialogResult result = MessageBox.Show(
+                    $"Deseja excluir o item {id}?",
+                    "Confirmar",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question
+                );
+
+                if (result == DialogResult.Yes)
+                {
+                    ProdutoController.ExcluirProduto(id);
+                    //this.LoadInfo();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Selecione ao menos um item", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            }
         }
         private void handleVoltarClik(object sender, EventArgs e)
         {
             using (Views.Menu menu = new Views.Menu())
             {
-            }
-            this.Close();       
+                this.parent.Show();
+                this.Close();  
+            }    
         }  
     }           
 }

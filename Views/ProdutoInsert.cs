@@ -11,8 +11,7 @@ namespace Views
     public class ProdutoInsert : BaseForm
     {
         public delegate void HandleButton(object sender, EventArgs e);
-
-        
+        Form parent;
         readonly Label lblNome;
         readonly TextBox textNome;
         readonly Label lblValor;
@@ -20,8 +19,11 @@ namespace Views
         readonly Button btnConfirm;
         readonly Button btnCancel;
 
-        public ProdutoInsert() : base("Inserir Produto")
+        public ProdutoInsert(ProdutoMenu parent) : base("Inserir Produto")
         {
+            this.parent = parent;
+            this.parent.Hide();
+
             this.ClientSize = new System.Drawing.Size(400,700);
 
             this.lblNome = new Label
@@ -89,7 +91,7 @@ namespace Views
                         
                     );
                     MessageBox.Show("Dados inseridos com sucesso.");
-                   ProdutoMenu menu = new ProdutoMenu();
+                    this.parent.Show();
                     this.Close();
                 }
             }
@@ -102,8 +104,8 @@ namespace Views
 
         private void handleCancelClick(object sender, EventArgs e)
         {
-            Views.Menu menu = new Views.Menu();
-            this.Close();
+            this.parent.Show();
+            this.Close();  
         }  
     }       
 }
