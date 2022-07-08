@@ -42,7 +42,7 @@ namespace Views
                     this.fieldNome.txtField.Text
             
                 );
-                this.parent.LoadInfo();
+                //this.parent.LoadInfo();
                 this.parent.Show();
                 this.Close();
             }
