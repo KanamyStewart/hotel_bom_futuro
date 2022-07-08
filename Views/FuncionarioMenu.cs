@@ -11,13 +11,19 @@ namespace Views
 {
     public class FuncionarioMenu : BaseForm
     {
+        Form parent;
+        public ListView listView;
         readonly Button btnInsert;
         readonly Button btnAlterar;
         readonly Button btnExcluir;
         readonly Button btnVoltar;
         internal static readonly object listUsuarios;
-        public FuncionarioMenu() : base(" Funcionario ")
+        public FuncionarioMenu(AdminMenu parent) : base(" Funcionario ")
         {
+            
+            this.parent = parent;
+            this.parent.Hide();
+            
             ListView listView = new ListView
             {
                 Dock = DockStyle.Fill,
@@ -102,24 +108,42 @@ namespace Views
             }
         private void handleInsertClick(object sender, EventArgs e)
         {
-            FuncionarioInsert menu = new FuncionarioInsert();
-            menu.ShowDialog();
+            (new FuncionarioInsert(this)).Show();
+                this.Hide();
         }
 
         private void handleAlterarClick(object sender, EventArgs e)
         {
-           FuncionarioUpdate menu = new FuncionarioUpdate();
-            //menu.ShowDialog();
+           (new FuncionarioUpdate(this)).Show();
+                this.Hide();
         }
         private void handleExcluirClick(object sender, EventArgs e)
         {
-            FuncionarioDelete menu = new FuncionarioDelete();
-            menu.ShowDialog();
+            if (this.listView.SelectedItems.Count > 0)
+            {
+                int id = Convert.ToInt32(this.listView.SelectedItems[0].Text);
+                DialogResult result = MessageBox.Show(
+                    $"Deseja excluir o item {id}?",
+                    "Confirmar",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question
+                );
+
+                if (result == DialogResult.Yes)
+                {
+                    FuncionarioController.DeletarFuncionario(id);
+                    //this.LoadInfo();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Selecione ao menos um item", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            }
         }
         private void handleVoltarClik(object sender, EventArgs e)
         {
-            FuncionarioMenu  menu = new FuncionarioMenu();
-            this.Close();       
+            this.parent.Show();
+            this.Close();      
         }  
     }           
 }

@@ -13,6 +13,7 @@ namespace Views
         public delegate void HandleButton(object sender, EventArgs e);
 
         
+        Form parent;
         readonly Label lblNome;
         readonly TextBox textNome;
         readonly Label lblFuncao;
@@ -22,7 +23,7 @@ namespace Views
         readonly Button btnConfirm;
         readonly Button btnCancel;
 
-        public FuncionarioInsert() : base("Inserir Funcionario")
+        public FuncionarioInsert(FuncionarioMenu parent) : base("Inserir Funcionario")
         {
             this.ClientSize = new System.Drawing.Size(400,700);
 
@@ -99,7 +100,7 @@ namespace Views
                         
                     );
                     MessageBox.Show("Dados inseridos com sucesso.");
-                   FuncionarioMenu menu = new FuncionarioMenu();
+                    this.parent.Show();
                     this.Close();
                 }
             }
@@ -112,8 +113,8 @@ namespace Views
 
         private void handleCancelClick(object sender, EventArgs e)
         {
-            Views.Menu menu = new Views.Menu();
-            this.Close();
+            this.parent.Show();
+            this.Close();  
         }  
     }       
 }
