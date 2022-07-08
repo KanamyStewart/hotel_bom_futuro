@@ -12,6 +12,7 @@ namespace Views
     {
         public delegate void HandleButton(object sender, EventArgs e);
         Form parent;
+
         readonly Label lblId;
         readonly TextBox textId;
         readonly Label lblCheckin;
@@ -37,52 +38,55 @@ namespace Views
         readonly Button btnConfirm1;
         readonly Button btnCancel1;
 
-        public ReservaUpdate(ReservaMenu parent) : base("Despesas")
+        public ReservaUpdate(ReservaMenu parent) : base("Reserva")
         {
-            this.ClientSize = new System.Drawing.Size(400,700);
+            this.parent = parent;
+            this.parent.Hide();
 
-            this.lblId = new Label
+            this.ClientSize = new System.Drawing.Size(400,800);
+
+             this.lblId = new Label
             {
                 Text = " Id para Alterar",
-                Location = new Point(120, 100),
+                Location = new Point(120, 20),
                 Size = new Size(240, 15)
             };
 
             textId = new TextBox
             {
-                Location = new Point(10, 125),
+                Location = new Point(10, 45),
                 Size = new Size(360, 20)
             };
 
             this.lblCheckin = new Label
             {
                 Text = " Checkin ",
-                Location = new Point(120, 150),
+                Location = new Point(120, 70),
                 Size = new Size(240, 15)
             };
 
             textCheckin = new TextBox
             {
-                Location = new Point(10, 175),
+                Location = new Point(10, 95),
                 Size = new Size(360, 20)
             };
 
             this.lblCheckout = new Label
             {
                 Text = " Checkout",
-                Location = new Point(120, 200)
+                Location = new Point(120, 120)
             };
 
             textCheckout = new TextBox
             {
-                Location = new Point(10, 225),
+                Location = new Point(10, 145),
                 Size = new Size(360, 20)
             };
 
             this.lblQuarto = new Label
             {
                 Text = " Quarto",
-                Location = new Point(120, 250)
+                Location = new Point(120, 170)
             };
 
             // Create and initialize a CheckBox.
@@ -92,7 +96,7 @@ namespace Views
                 .Select(Quarto => Quarto.ToSuggestion())
                 .ToArray();
             this.checkListBoxQuarto = new CheckedListBox{
-                Location = new Point(10, 275),
+                Location = new Point(10, 195),
                 Size = new Size(360, 100),
                 
             };
@@ -102,79 +106,82 @@ namespace Views
             this.lblNomeHospede = new Label
             {
                 Text = " Nome do Hospede",
-                Location = new Point(120, 300)
+                Location = new Point(120, 290),
+                Size = new Size(360,20)
             };
 
             textNomeHospede = new TextBox
             {
-                Location = new Point(10, 325),
+                Location = new Point(10, 315),
                 Size = new Size(360, 20)
             };
 
             this.lblDataNasc = new Label
             {
                 Text = " Data de Nascimento",
-                Location = new Point(120, 350)
+                Location = new Point(120, 340),
+                Size = new Size(360,20)
             };
 
             textDataNasc= new TextBox
             {
-                Location = new Point(10, 375),
+                Location = new Point(10, 365),
                 Size = new Size(360, 20)
             };
 
             this.lblEmail = new Label
             {
                 Text = " Email",
-                Location = new Point(120, 400)
+                Location = new Point(120, 390)
             };
 
             textEmail= new TextBox
             {
-                Location = new Point(10, 425),
+                Location = new Point(10, 415),
                 Size = new Size(360, 20)
             };
 
             this.lblTelefone = new Label
             {
                 Text = " Telefone",
-                Location = new Point(120, 450)
+                Location = new Point(120, 440)
             };
 
             textTelefone= new TextBox
             {
-                Location = new Point(10, 475),
+                Location = new Point(10, 465),
                 Size = new Size(360, 20)
             };
 
             this.lblCpf = new Label
             {
                 Text = " CPF",
-                Location = new Point(120, 500)
+                Location = new Point(120, 490)
             };
 
             textCpf= new TextBox
             {
-                Location = new Point(10, 525),
+                Location = new Point(10, 515),
                 Size = new Size(360, 20)
             };
 
             this.lblNomeMae = new Label
             {
                 Text = " Nome da Mãe",
-                Location = new Point(120, 550)
+                Location = new Point(120, 540)
             };
 
             textNomeMae= new TextBox
             {
-                Location = new Point(10, 575),
+                Location = new Point(10, 565),
                 Size = new Size(360, 20)
             };
 
-             this.lblNomeMae = new Label
+             this.lblFormaPagamento = new Label
             {
                 Text = " Forma de Pagamento",
-                Location = new Point(120, 600)
+                Location = new Point(120, 590),
+                Size = new Size(360,20)
             };
 
             // Create and initialize a CheckBox.
@@ -184,7 +191,7 @@ namespace Views
                 .Select(Quarto => Quarto.ToSuggestion())
                 .ToArray();
             this.checkListBoxFormaPagamento = new CheckedListBox{
-                Location = new Point(10, 625),
+                Location = new Point(10, 615),
                 Size = new Size(360, 100),
                 
             };
@@ -192,8 +199,10 @@ namespace Views
 
 
 
-            this.btnConfirm1 = new Campos.ButtonForm(this.Controls,"Confirmar", 80,690, this.handleConfirmClick);
-            this.btnCancel1 = new  Campos.ButtonForm(this.Controls,"Cancelar", 190, 690, this.handleCancelClick);
+     
+
+            this.btnConfirm1 = new Campos.ButtonForm(this.Controls,"Confirmar", 80,720, this.handleConfirmClick);
+            this.btnCancel1 = new  Campos.ButtonForm(this.Controls,"Cancelar", 190, 720, this.handleCancelClick);
 
             this.Controls.Add(this.lblId);
             this.Controls.Add(this.textId);
@@ -226,19 +235,10 @@ namespace Views
         {
             string[] comboValue = checkListBoxQuarto.Text.Split(" ");
             int QuartoId = int.Parse(comboValue[0]);
-            int Id;
             DateTime CheckinId;
             DateTime Checkout;
             string[] comboValue1 = checkListBoxFormaPagamento.Text.Split(" ");
             int FormaPagamentoId = int.Parse(comboValue[0]);
-            try
-            {
-               Id = int.Parse(textId.Text);
-            }
-            catch
-            {
-                throw new Exception("Data inválida.");
-            }
 
             try
             {
@@ -268,8 +268,7 @@ namespace Views
                 );
 
                 if (confirm == DialogResult.Yes) {
-                    ReservaController.AlterarReserva(
-                        Id,
+                    ReservaController.InserirReserva(
                         CheckinId,
                         Checkout,
                         QuartoId,
@@ -298,7 +297,8 @@ namespace Views
         private void handleCancelClick(object sender, EventArgs e)
         {
             this.parent.Show();
-            this.Close(); 
+            this.Close();     
         }  
+          
     }       
 }

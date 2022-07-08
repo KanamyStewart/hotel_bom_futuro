@@ -29,37 +29,37 @@ namespace Views
             this.parent = parent;
             this.parent.Hide();
 
-            this.ClientSize = new System.Drawing.Size(400,300);
+            this.ClientSize = new System.Drawing.Size(400,400);
 
             this.lblQuarto = new Label
             {
                 Text = " Quarto ",
-                Location = new Point(120, 100),
+                Location = new Point(120, 20),
                 Size = new Size(240, 15)
             };
 
             textQuarto = new TextBox
             {
-                Location = new Point(10, 125),
+                Location = new Point(10, 45),
                 Size = new Size(360, 20)
             };
 
             this.lblValorTotal = new Label
             {
                 Text = " Valor Total",
-                Location = new Point(120, 150)
+                Location = new Point(120, 70)
             };
 
             textValorTotal = new TextBox
             {
-                Location = new Point(10, 175),
+                Location = new Point(10, 95),
                 Size = new Size(360, 20)
             };
 
             this.lblProduto = new Label
             {
                 Text = " Produto",
-                Location = new Point(120, 200)
+                Location = new Point(120, 120)
             };
 
             string[] produtosSuggestion = ProdutoController
@@ -67,7 +67,7 @@ namespace Views
                 .Select(produto => produto.ToSuggestion())
                 .ToArray();
             this.comboBoxProduto = new ComboBox{
-                Location = new Point(10, 300),
+                Location = new Point(10, 145),
                 Size = new Size(360, 20),
                 DropDownStyle = ComboBoxStyle.DropDownList
             };
@@ -77,19 +77,19 @@ namespace Views
             this.lblQuantidade = new Label
             {
                 Text = " Quantidade",
-                Location = new Point(120, 325)
+                Location = new Point(120, 240)
             };
 
             textQuantidade = new TextBox
             {
-                Location = new Point(10, 350),
+                Location = new Point(10, 265),
                 Size = new Size(360, 20)
             };
 
      
 
-            this.btnConfirm1 = new Campos.ButtonForm(this.Controls,"Confirmar", 80,240, this.handleConfirmClick);
-            this.btnCancel1 = new  Campos.ButtonForm(this.Controls,"Cancelar", 190, 240, this.handleCancelClick);
+            this.btnConfirm1 = new Campos.ButtonForm(this.Controls,"Confirmar", 80,320, this.handleConfirmClick);
+            this.btnCancel1 = new  Campos.ButtonForm(this.Controls,"Cancelar", 190, 320, this.handleCancelClick);
 
     
             this.Controls.Add(this.lblQuarto);

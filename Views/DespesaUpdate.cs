@@ -36,45 +36,45 @@ namespace Views
              this.lblId = new Label
             {
                 Text = " Id para alterar ",
-                Location = new Point(80, 100),
+                Location = new Point(80, 20),
                 Size = new Size(240, 20)
             };
 
             textId = new TextBox
             {
-                Location = new Point(10, 125),
+                Location = new Point(10, 45),
                 Size = new Size(360, 20)
             };
 
             this.lblQuarto = new Label
             {
                 Text = " Quarto ",
-                Location = new Point(120, 150),
+                Location = new Point(120, 70),
                 Size = new Size(240, 15)
             };
 
             textQuarto = new TextBox
             {
-                Location = new Point(10, 175),
+                Location = new Point(10, 95),
                 Size = new Size(360, 20)
             };
 
             this.lblValorTotal = new Label
             {
                 Text = " Valor Total",
-                Location = new Point(120, 200)
+                Location = new Point(120, 120)
             };
 
             textValorTotal = new TextBox
             {
-                Location = new Point(10, 225),
+                Location = new Point(10, 145),
                 Size = new Size(360, 20)
             };
 
             this.lblProduto = new Label
             {
                 Text = " Produto",
-                Location = new Point(120, 250)
+                Location = new Point(120, 170)
             };
 
             string[] produtosSuggestion = ProdutoController
@@ -82,7 +82,7 @@ namespace Views
                 .Select(produto => produto.ToSuggestion())
                 .ToArray();
             this.comboBoxProduto = new ComboBox{
-                Location = new Point(10, 275),
+                Location = new Point(10, 195),
                 Size = new Size(360, 20),
                 DropDownStyle = ComboBoxStyle.DropDownList
             };
@@ -92,12 +92,12 @@ namespace Views
             this.lblQuantidade = new Label
             {
                 Text = " Quantidade",
-                Location = new Point(120, 300)
+                Location = new Point(120, 290)
             };
 
             textQuantidade = new TextBox
             {
-                Location = new Point(10, 325),
+                Location = new Point(10, 315),
                 Size = new Size(360, 20)
             };
 

@@ -24,15 +24,17 @@ namespace Views
         {
             this.parent = parent;
             this.parent.Hide();
-            btnStorage = new Campos.ButtonForm(this.Controls,"Despesa", 30, 30, this.handleStorage); 
-            btnReservation = new Campos.ButtonForm(this.Controls,"Reserva", 170, 30, this.handleReservation);
-            btnProduct = new Campos.ButtonForm(this.Controls,"Produto", 30, 130, this.handleProduct);
-            btnRoom = new Campos.ButtonForm(this.Controls,"Quarto", 170, 130, this.handleRoom);
-            btnCleaning = new Campos.ButtonForm(this.Controls,"Limpeza", 30, 230, this.handleCleaning);
-            btnEmploye = new Campos.ButtonForm(this.Controls,"Funcionário", 170, 230, this.handleEmploye);
-            btnPayment = new Campos.ButtonForm(this.Controls,"Pagamento", 30, 330, this.handlePayment);
-            btnUser = new Campos.ButtonForm(this.Controls,"Usuário", 170, 330, this.handleUser);
-            btnExit = new Campos.ButtonForm(this.Controls,"Sair", 100, 430, this.handleExit);
+            this.ClientSize = new System.Drawing.Size(350,500);
+
+            btnStorage = new Campos.ButtonForm(this.Controls,"Despesa", 50, 30, this.handleStorage); 
+            btnReservation = new Campos.ButtonForm(this.Controls,"Reserva", 190, 30, this.handleReservation);
+            btnProduct = new Campos.ButtonForm(this.Controls,"Produto", 50, 150, this.handleProduct);
+            btnRoom = new Campos.ButtonForm(this.Controls,"Quarto", 190, 150, this.handleRoom);
+            btnCleaning = new Campos.ButtonForm(this.Controls,"Limpeza", 50, 250, this.handleCleaning);
+            btnEmploye = new Campos.ButtonForm(this.Controls,"Funcionário", 190, 250, this.handleEmploye);
+            btnPayment = new Campos.ButtonForm(this.Controls,"Pagamento", 50, 350, this.handlePayment);
+            btnUser = new Campos.ButtonForm(this.Controls,"Usuário", 190, 350, this.handleUser);
+            btnExit = new Campos.ButtonForm(this.Controls,"Sair", 120, 420, this.handleExit);
 
             this.Controls.Add(btnStorage);
             this.Controls.Add(btnReservation);

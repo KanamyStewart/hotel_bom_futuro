@@ -25,31 +25,31 @@ namespace Views
             this.parent = parent;
             this.parent.Hide();
             
-            this.ClientSize = new System.Drawing.Size(400,700);
+            this.ClientSize = new System.Drawing.Size(400,200);
 
             this.lblLogin = new Label
             {
                 Text = " Login ",
-                Location = new Point(120, 100),
+                Location = new Point(120, 20),
                 Size = new Size(240, 15)
             };
 
             textLogin = new TextBox
             {
-                Location = new Point(10, 125),
+                Location = new Point(10, 45),
                 Size = new Size(360, 20)
             };
 
             this.lblSenha = new Label
             {
                 Text = " Senha",
-                Location = new Point(120, 150)
+                Location = new Point(120, 70)
             };
 
 
             texSenha = new TextBox
             {
-                Location = new Point(10, 175),
+                Location = new Point(10, 95),
                 Size = new Size(360, 20)
             };
         
@@ -61,8 +61,8 @@ namespace Views
             this.Controls.Add(this.btnConfirm);
             this.Controls.Add(this.btnCancel);
             
-            this.btnConfirm = new Campos.ButtonForm(this.Controls,"Confirmar", 80,220, this.handleConfirmClick);
-            this.btnCancel = new Campos.ButtonForm(this.Controls,"Cancelar", 190, 220, this.handleCancelClick);
+            this.btnConfirm = new Campos.ButtonForm(this.Controls,"Confirmar", 80,140, this.handleConfirmClick);
+            this.btnCancel = new Campos.ButtonForm(this.Controls,"Cancelar", 190, 140, this.handleCancelClick);
  
         }
         private void handleConfirmClick(object sender, EventArgs e) 

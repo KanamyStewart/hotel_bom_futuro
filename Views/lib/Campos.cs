@@ -92,7 +92,7 @@ namespace lib
             {
                 this.Text = Text;
                 this.Location = new Point(X, Y);
-                this.Size = new Size(80, 30);
+                this.Size = new Size(100, 30);
                 this.Click += new EventHandler(handleAction);
                 Ref.Add(this);
             }
