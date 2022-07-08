@@ -17,6 +17,7 @@ namespace Views
 {
     public class UsuarioUpdate : BaseForm
     {
+        Form parent;
         public delegate void HandleButton(object sender, EventArgs e);
         Label lblId;
         TextBox textId;
@@ -27,9 +28,12 @@ namespace Views
         Button btnConfirm1;
         Button btnCancel1;
 
-        public UsuarioUpdate() : base("Alterar Usuarios")
+        public UsuarioUpdate(UsuarioMenu parent) : base("Alterar Usuarios")
         {
 
+            this.parent = parent;
+            this.parent.Hide();
+            
             this.lblId = new Label();
             this.lblId.Text = " Digite o Id  ";
             this.lblId.Location = new Point(120, 50);
@@ -92,7 +96,7 @@ namespace Views
                 );
 
                 MessageBox.Show("Dados alterados com sucesso.");
-                UsuarioMenu menu = new UsuarioMenu();
+                this.parent.Show();
                 this.Close();
 
             }
@@ -104,8 +108,8 @@ namespace Views
         
         private void handleCancelClick(object sender, EventArgs e)
         {
-            //Views.AdminMenu menu = new AdminMenu();
-            //this.Close();
+            this.parent.Show();
+            this.Close(); 
         }  
     }       
 }

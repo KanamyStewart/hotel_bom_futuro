@@ -12,7 +12,7 @@ namespace Views
     {
         public delegate void HandleButton(object sender, EventArgs e);
 
-        
+        Form parent;
         readonly Label lblLogin;
         readonly TextBox textLogin;
         readonly Label lblSenha;
@@ -20,8 +20,11 @@ namespace Views
         readonly Button btnConfirm;
         readonly Button btnCancel;
 
-        public UsuarioInsert() : base("Inserir Usuario")
+        public UsuarioInsert(UsuarioMenu parent) : base("Inserir Usuario")
         {
+            this.parent = parent;
+            this.parent.Hide();
+            
             this.ClientSize = new System.Drawing.Size(400,700);
 
             this.lblLogin = new Label
@@ -81,7 +84,7 @@ namespace Views
                         
                     );
                     MessageBox.Show("Dados inseridos com sucesso.");
-                   UsuarioMenu menu = new UsuarioMenu();
+                   this.parent.Show();
                     this.Close();
                 }
             }
@@ -94,8 +97,8 @@ namespace Views
 
         private void handleCancelClick(object sender, EventArgs e)
         {
-            Views.Menu menu = new Views.Menu();
-            this.Close();
+            this.parent.Show();
+            this.Close();  
         }  
     }       
 }

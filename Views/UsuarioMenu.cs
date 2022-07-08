@@ -11,13 +11,18 @@ namespace Views
 {
     public class UsuarioMenu : BaseForm
     {
+        Form parent;
+        public ListView listView;
         readonly Button btnInsert;
         readonly Button btnAlterar;
         readonly Button btnExcluir;
         readonly Button btnVoltar;
         internal static readonly object listUsuarios;
-        public UsuarioMenu() : base(" Usuario")
+        public UsuarioMenu(AdminMenu parent) : base(" Usuario")
         {
+            this.parent = parent;
+            this.parent.Hide();
+
             ListView listView = new ListView
             {
                 Dock = DockStyle.Fill,
@@ -96,24 +101,42 @@ namespace Views
             }
         private void handleInsertClick(object sender, EventArgs e)
         {
-            UsuarioInsert menu = new UsuarioInsert();
-            menu.ShowDialog();
+            this.parent.Show();
+            this.Close();
         }
 
         private void handleAlterarClick(object sender, EventArgs e)
         {
-           UsuarioUpdate menu = new UsuarioUpdate();
-            //menu.ShowDialog();
+           (new UsuarioUpdate(this)).Show();
+            this.Hide();
         }
         private void handleExcluirClick(object sender, EventArgs e)
         {
-            UsuarioDelete menu = new UsuarioDelete();
-            menu.ShowDialog();
+            if (this.listView.SelectedItems.Count > 0)
+            {
+                int id = Convert.ToInt32(this.listView.SelectedItems[0].Text);
+                DialogResult result = MessageBox.Show(
+                    $"Deseja excluir o item {id}?",
+                    "Confirmar",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question
+                );
+
+                if (result == DialogResult.Yes)
+                {
+                    UsuarioController.ExcluirUsuario(id);
+                    //this.LoadInfo();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Selecione ao menos um item", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+            }
         }
         private void handleVoltarClik(object sender, EventArgs e)
         {
-            UsuarioMenu  menu = new UsuarioMenu();
-            this.Close();       
+            this.parent.Show();
+            this.Close();      
         }  
     }           
 }
