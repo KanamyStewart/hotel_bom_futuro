@@ -11,7 +11,7 @@ namespace Views
     public class ReservaUpdate : BaseForm
     {
         public delegate void HandleButton(object sender, EventArgs e);
-
+        Form parent;
         readonly Label lblId;
         readonly TextBox textId;
         readonly Label lblCheckin;
@@ -37,7 +37,7 @@ namespace Views
         readonly Button btnConfirm1;
         readonly Button btnCancel1;
 
-        public ReservaUpdate() : base("Despesas")
+        public ReservaUpdate(ReservaMenu parent) : base("Despesas")
         {
             this.ClientSize = new System.Drawing.Size(400,700);
 
@@ -285,8 +285,8 @@ namespace Views
                 }
 
                 MessageBox.Show("Dados inseridos com sucesso.");
-                   ReservaMenu menu = new ReservaMenu();
-                    this.Close();
+                   this.parent.Show();
+                   this.Close();
 
             }
             catch
@@ -297,8 +297,8 @@ namespace Views
 
         private void handleCancelClick(object sender, EventArgs e)
         {
-            Views.Menu menu = new Views.Menu();
-            this.Close();
+            this.parent.Show();
+            this.Close(); 
         }  
     }       
 }

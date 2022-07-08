@@ -11,7 +11,7 @@ namespace Views
     public class ReservaInsert : BaseForm
     {
         public delegate void HandleButton(object sender, EventArgs e);
-
+        Form parent;
         readonly Label lblCheckin;
         readonly TextBox textCheckin;
         readonly Label lblCheckout;
@@ -35,8 +35,11 @@ namespace Views
         readonly Button btnConfirm1;
         readonly Button btnCancel1;
 
-        public ReservaInsert() : base("Despesas")
+        public ReservaInsert(ReservaMenu parent) : base("Despesas")
         {
+            this.parent = parent;
+            this.parent.Hide();
+
             this.ClientSize = new System.Drawing.Size(400,700);
 
             this.lblCheckin = new Label
@@ -261,8 +264,8 @@ namespace Views
                 }
 
                 MessageBox.Show("Dados inseridos com sucesso.");
-                   ReservaMenu menu = new ReservaMenu();
-                    this.Close();
+                   this.parent.Show();
+                   this.Close();
 
             }
             catch
@@ -273,8 +276,9 @@ namespace Views
 
         private void handleCancelClick(object sender, EventArgs e)
         {
-            Views.Menu menu = new Views.Menu();
-            this.Close();
+            this.parent.Show();
+            this.Close();     
         }  
+          
     }       
 }
