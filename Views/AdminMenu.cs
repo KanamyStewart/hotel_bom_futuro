@@ -47,19 +47,19 @@ namespace Views
 
         private void handleStorage(object sender, EventArgs e)
         {
-            //(new Hospede(this)).Show();
-            //this.Hide();
+            (new DespesaMenu(this)).Show();
+            this.Hide();
         }
         private void handleReservation(object sender, EventArgs e)
         {
-            //(new Hospede(this)).Show();
-            //this.Hide();
+            (new ReservaList(this)).Show();
+            this.Hide();
         }
         
         private void handleProduct(object sender, EventArgs e)
         {
-            //(new Hospede(this)).Show();
-            //this.Hide();
+            (new ProdutoMenu(this)).Show();
+            this.Hide();
         }
         private void handleRoom(object sender, EventArgs e)
         {
@@ -69,24 +69,24 @@ namespace Views
 
         private void handleCleaning(object sender, EventArgs e)
         {
-            //(new Hospede(this)).Show();
+            //(new CrudLimpeza(this)).Show();
             //this.Hide();
         }
         private void handleEmploye(object sender, EventArgs e)
         {
-            //(new Hospede(this)).Show();
-            //this.Hide();
+            (new FuncionarioMenu(this)).Show();
+            this.Hide();
         }
 
         private void handlePayment(object sender, EventArgs e)
         {
-            //(new Hospede(this)).Show();
-            //this.Hide();
+            (new CrudFormasPagamento(this)).Show();
+            this.Hide();
         }
         private void handleUser(object sender, EventArgs e)
         {
-            //(new Hospede(this)).Show();
-            //this.Hide();
+            (new UsuarioMenu(this)).Show();
+            this.Hide();
         }
 
          private void handleExit(object sender, EventArgs e)
