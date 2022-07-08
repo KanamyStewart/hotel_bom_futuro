@@ -1,0 +1,175 @@
+using System;
+using System.Linq;
+using System.Windows.Forms;
+using System.Drawing;
+using Controllers;
+using static lib.Campos;
+using lib;
+using Models;
+
+
+namespace Views
+{
+    public class QuartoUpdate : BaseForm
+    {   
+        Form parent;
+        public delegate void HandleButton(object sender, EventArgs e);
+
+        Label lblId;
+        TextBox textId;
+        Label lblNome;
+        TextBox textNome;
+        Label lblNumero;
+        TextBox textNumero;
+        Label lblDescricao;
+        TextBox textDescricao;
+        Label lblValor;
+        TextBox textValor;
+        Button btnConfirm1;
+        Button btnCancel1;
+        PictureBox pbLogo;
+
+        public QuartoUpdate(QuartoMenu parent) : base("Alterar Quarto")
+        {
+            this.parent = parent;
+            this.parent.Hide();
+            this.ClientSize = new System.Drawing.Size(400, 600);
+
+            this.lblId = new Label
+            {
+                Text = " Id para alterar ",
+                Location = new Point(10, 45),
+                Size = new Size(240, 20)
+            };
+
+            textId = new TextBox
+            {
+                Location = new Point(10, 70),
+                Size = new Size(360, 20)
+            };
+
+            this.lblNome = new Label
+            {
+                Text = " Nome",
+                Location = new Point(10, 95)
+            };
+
+            textNome = new TextBox
+            {
+                Location = new Point(10, 120),
+                Size = new Size(360, 20)
+            };
+
+            this.lblNumero = new Label
+            {
+                Text = " Numero",
+                Location = new Point(10, 145)
+            };
+
+            textNumero = new TextBox
+            {
+                Location = new Point(10, 170),
+                Size = new Size(360, 20)
+            };
+
+            this.lblDescricao = new Label
+            {
+                Text = " Descrição",
+                Location = new Point(10, 195)
+            };
+
+            textDescricao = new TextBox
+            {
+                Location = new Point(10, 220),
+                Size = new Size(360, 20)
+            };
+
+            this.lblValor = new Label
+            {
+                Text = " Valor",
+                Location = new Point(10, 245)
+            };
+
+            textValor = new TextBox
+            {
+                Location = new Point(10, 270),
+                Size = new Size(360, 20)
+            };
+
+            this.btnConfirm1 = new Campos.ButtonForm(this.Controls, "Confirmar", 100, 500, this.handleConfirmClick);
+            this.btnCancel1 = new Campos.ButtonForm(this.Controls, "Cancelar", 200, 500, this.handleCancelClick);
+
+            this.pbLogo = new PictureBox();
+            this.pbLogo.Size = new Size(250, 250);
+            this.pbLogo.Location = new Point(60, 250);
+            this.pbLogo.ClientSize = new Size(250, 250);
+            this.pbLogo.Load("quartocasal.jpg");
+            this.pbLogo.SizeMode = PictureBoxSizeMode.Zoom;
+            this.Controls.Add(pbLogo);
+
+            this.Controls.Add(this.lblId);
+            this.Controls.Add(this.textId);
+            this.Controls.Add(this.lblNome);
+            this.Controls.Add(this.textNome);
+            this.Controls.Add(this.lblNumero);
+            this.Controls.Add(this.textNumero);
+            this.Controls.Add(this.lblDescricao);
+            this.Controls.Add(this.textDescricao);
+            this.Controls.Add(this.lblValor);
+            this.Controls.Add(this.textValor);
+            this.Controls.Add(this.btnConfirm1);
+            this.Controls.Add(this.btnCancel1);
+
+
+        }
+
+        private void handleConfirmClick(object sender, EventArgs e)
+        {
+            try
+            {
+                int Id;
+                try
+                {
+                    Id = int.Parse(textId.Text);
+                }
+                catch
+                {
+                    throw new Exception("ID inválido.");
+                }
+
+                double Valor;
+                try
+                {
+                    Valor = double.Parse(textValor.Text);
+                }
+                catch
+                {
+                    throw new Exception("Valor inválido.");
+                }
+
+                QuartoController.AlterarQuarto(
+                     Id,
+                     textNome.Text,
+                     textNumero.Text,
+                     textDescricao.Text,
+                     Valor
+                 );
+
+                MessageBox.Show("Dados alterados com sucesso.");
+                //Views.ProdutoMenu menu = new Views.ProdutoMenu();
+                //this.Close();
+
+            }
+            catch (System.Exception err)
+            {
+                MessageBox.Show($"Não foi possível inserir os dados. {err.Message}");
+            }
+        }
+
+        private void handleCancelClick(object sender, EventArgs e)
+        {
+            //Views.Menu menu = new Views.Menu();
+            //this.Close();
+        }
+    }
+}
