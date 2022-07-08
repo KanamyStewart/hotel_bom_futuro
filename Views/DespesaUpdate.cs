@@ -31,7 +31,7 @@ namespace Views
             this.parent = parent;
             this.parent.Hide();
 
-            this.ClientSize = new System.Drawing.Size(400,300);
+            this.ClientSize = new System.Drawing.Size(400,450);
 
              this.lblId = new Label
             {
