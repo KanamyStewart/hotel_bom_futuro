@@ -69,16 +69,16 @@ namespace Views
 
         private void handleIncluir(object sender, EventArgs e)
         {
-            (new CadastrarLimpeza(this)).Show();
-            this.Hide();
+            //(new CadastrarLimpeza(this)).Show();
+            //this.Hide();
 
         }
         private void handleAlterar(object sender, EventArgs e)
         {
             if (this.listView.SelectedItems.Count > 0)
             {
-                (new EditarLimpeza(this)).Show();
-                this.Hide();
+                //(new EditarLimpeza(this)).Show();
+                //this.Hide();
             }
             else
             {

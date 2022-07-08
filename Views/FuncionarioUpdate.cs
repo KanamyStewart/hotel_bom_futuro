@@ -32,47 +32,49 @@ namespace Views
 
         public FuncionarioUpdate(FuncionarioMenu parent) : base("Alterar Funcionário")
         {
+            this.ClientSize = new System.Drawing.Size(400,340);
+
 
             this.parent = parent;
             this.parent.Hide();
 
             this.lblId = new Label();
             this.lblId.Text = " Id: ";
-            this.lblId.Location = new Point(120, 50);
+            this.lblId.Location = new Point(120, 20);
             this.lblId.Size = new Size(240,15);
 
             textId = new TextBox();
-            textId.Location = new Point(10,75);
+            textId.Location = new Point(10,45);
             textId.Size = new Size(360,20);
 
             this.lblNome = new Label();
             this.lblNome.Text = " Nome: ";
-            this.lblNome.Location = new Point(120, 100);
+            this.lblNome.Location = new Point(120, 70);
             this.lblNome.Size = new Size(240,15);
 
             textNome = new TextBox();
-            textNome.Location = new Point(10,125);
+            textNome.Location = new Point(10,95);
             textNome.Size = new Size(360,20);
 
             this.lblFuncao = new Label();
             this.lblFuncao.Text = " Função: ";
-            this.lblFuncao.Location = new Point(120, 100);
+            this.lblFuncao.Location = new Point(120, 120);
             this.lblFuncao.Size = new Size(240,15);
 
             textFuncao = new TextBox();
-            textFuncao.Location = new Point(10,125);
+            textFuncao.Location = new Point(10,145);
             textFuncao.Size = new Size(360,20);
 
             this.lblTelefone = new Label();
             this.lblTelefone.Text = " Telefone: ";
-            this.lblTelefone.Location = new Point(120, 200);
+            this.lblTelefone.Location = new Point(120, 170);
 
             textTelefone = new TextBox();
-            textTelefone.Location = new Point(10,225);
+            textTelefone.Location = new Point(10,195);
             textTelefone.Size = new Size(360,20);
 
-            this.btnConfirm1 = new Campos.ButtonForm(this.Controls, "Confirmar", 40,260, this.handleConfirmClick);
-            this.btnCancel1 = new Campos.ButtonForm(this.Controls, "Cancelar", 150, 260, this.handleCancelClick);
+            this.btnConfirm1 = new Campos.ButtonForm(this.Controls, "Confirmar", 40,250, this.handleConfirmClick);
+            this.btnCancel1 = new Campos.ButtonForm(this.Controls, "Cancelar", 150, 250, this.handleCancelClick);
 
 
             this.Controls.Add(this.lblId);

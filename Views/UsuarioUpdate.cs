@@ -30,38 +30,39 @@ namespace Views
 
         public UsuarioUpdate(UsuarioMenu parent) : base("Alterar Usuarios")
         {
+            this.ClientSize = new System.Drawing.Size(400,240);
 
             this.parent = parent;
             this.parent.Hide();
             
             this.lblId = new Label();
             this.lblId.Text = " Digite o Id  ";
-            this.lblId.Location = new Point(120, 50);
+            this.lblId.Location = new Point(120, 20);
             this.lblId.Size = new Size(240,15);
 
             textId = new TextBox();
-            textId.Location = new Point(10,75);
+            textId.Location = new Point(10,45);
             textId.Size = new Size(360,20);
 
             this.lblLogin = new Label();
             this.lblLogin.Text = " Digite o Login ";
-            this.lblLogin.Location = new Point(120, 100);
+            this.lblLogin.Location = new Point(120, 70);
             this.lblLogin.Size = new Size(240,15);
 
             textLogin = new TextBox();
-            textLogin.Location = new Point(10,125);
+            textLogin.Location = new Point(10,95);
             textLogin.Size = new Size(360,20);
 
             this.lblSenha = new Label();
             this.lblSenha.Text = " Senha";
-            this.lblSenha.Location = new Point(120, 200);
+            this.lblSenha.Location = new Point(120, 120);
 
             textSenha = new TextBox();
-            textSenha.Location = new Point(10,225);
+            textSenha.Location = new Point(10,145);
             textSenha.Size = new Size(360,20);
 
-            this.btnConfirm1 = new Campos.ButtonForm(this.Controls, "Confirmar", 40,260, this.handleConfirmClick);
-            this.btnCancel1 = new Campos.ButtonForm(this.Controls, "Cancelar", 150, 260, this.handleCancelClick);
+            this.btnConfirm1 = new Campos.ButtonForm(this.Controls, "Confirmar", 40,200, this.handleConfirmClick);
+            this.btnCancel1 = new Campos.ButtonForm(this.Controls, "Cancelar", 150, 200, this.handleCancelClick);
 
 
             this.Controls.Add(this.lblId);

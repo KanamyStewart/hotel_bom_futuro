@@ -33,12 +33,12 @@ namespace Views
         {
             try
             {
-                Usuario.Auth(this.fieldUser.textField.Text, this.fieldPass.textField.Text);
-                if(Usuario.UsuarioAuth != null)
-                {
-                    (new AdminMenu(this)).Show();
+                //Usuario.Auth(this.fieldUser.textField.Text, this.fieldPass.textField.Text);
+                //if(Usuario.UsuarioAuth != null)
+            
+                (new AdminMenu(this)).Show();
                     this.Hide();
-                }
+            
                 
             }
             catch(Exception)

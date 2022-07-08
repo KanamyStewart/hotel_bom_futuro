@@ -22,49 +22,50 @@ namespace Views
         Button btnConfirm1;
         Button btnCancel1;
 
-        public ProdutoUpdate(AdminMenu parent) : base("Alterar Produto")
+        public ProdutoUpdate(ProdutoMenu parent) : base("Alterar Produto")
         {
 
             this.parent = parent;
             this.parent.Hide();
+            this.ClientSize = new System.Drawing.Size(400,240);
 
             this.lblId = new Label
             {
                 Text = " Id para alterar ",
-                Location = new Point(80, 100),
+                Location = new Point(80, 20),
                 Size = new Size(240, 20)
             };
 
             textId = new TextBox
             {
-                Location = new Point(10, 125),
+                Location = new Point(10, 45),
                 Size = new Size(360, 20)
             };
 
             this.lblNome = new Label
             {
                 Text = " Nome",
-                Location = new Point(120, 150)
+                Location = new Point(120, 70)
             };
 
             textNome = new TextBox
             {
-                Location = new Point(10, 175),
+                Location = new Point(10, 95),
                 Size = new Size(360, 20)
             };
 
             this.lblValor = new Label
             {
                 Text = " Valor",
-                Location = new Point(120, 200)
+                Location = new Point(120, 120)
             };
 
             textValor = new TextBox();
-            textValor.Location = new Point(10,225);
+            textValor.Location = new Point(10,145);
             textValor.Size = new Size(360,20);
 
-            this.btnConfirm1 = new Campos.ButtonForm(this.Controls,"Confirmar", 40,260, this.handleConfirmClick);
-            this.btnCancel1 = new  Campos.ButtonForm(this.Controls,"Cancelar", 150, 260, this.handleCancelClick);
+            this.btnConfirm1 = new Campos.ButtonForm(this.Controls,"Confirmar", 70,180, this.handleConfirmClick);
+            this.btnCancel1 = new  Campos.ButtonForm(this.Controls,"Cancelar", 180, 180, this.handleCancelClick);
   
            
             this.Controls.Add(this.lblId);

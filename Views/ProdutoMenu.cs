@@ -108,7 +108,7 @@ namespace Views
 
         private void handleAlterarClick(object sender, EventArgs e)
         {
-           //(new ProdutoUpdate(this)).Show();
+           (new ProdutoUpdate(this)).Show();
                 this.Hide();
         }
         private void handleExcluirClick(object sender, EventArgs e)

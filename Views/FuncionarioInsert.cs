@@ -25,44 +25,44 @@ namespace Views
 
         public FuncionarioInsert(FuncionarioMenu parent) : base("Inserir Funcionario")
         {
-            this.ClientSize = new System.Drawing.Size(400,700);
+            this.ClientSize = new System.Drawing.Size(400,300);
 
             this.lblNome = new Label
             {
                 Text = " Nome ",
-                Location = new Point(120, 100),
+                Location = new Point(120, 20),
                 Size = new Size(240, 15)
             };
 
             textNome = new TextBox
             {
-                Location = new Point(10, 125),
+                Location = new Point(10, 45),
                 Size = new Size(360, 20)
             };
 
             this.lblFuncao = new Label
             {
                 Text = " Função",
-                Location = new Point(120, 150),
+                Location = new Point(120, 70),
                 Size = new Size(240, 15)
             };
 
             textFuncao = new TextBox
             {
-                Location = new Point(10, 175),
+                Location = new Point(10, 95),
                 Size = new Size(360, 20)
             };
 
             this.lblTelefone = new Label
             {
                 Text = " Telefone ",
-                Location = new Point(120, 100),
+                Location = new Point(120, 120),
                 Size = new Size(240, 15)
             };
 
             textTelefone = new TextBox
             {
-                Location = new Point(10, 125),
+                Location = new Point(10, 145),
                 Size = new Size(360, 20)
             };
         
@@ -76,8 +76,8 @@ namespace Views
             this.Controls.Add(this.btnConfirm);
             this.Controls.Add(this.btnCancel);
             
-            this.btnConfirm = new Campos.ButtonForm(this.Controls,"Confirmar", 80,220, this.handleConfirmClick);
-            this.btnCancel = new Campos.ButtonForm(this.Controls,"Cancelar", 190, 220, this.handleCancelClick);
+            this.btnConfirm = new Campos.ButtonForm(this.Controls,"Confirmar", 80,200, this.handleConfirmClick);
+            this.btnCancel = new Campos.ButtonForm(this.Controls,"Cancelar", 190, 200, this.handleCancelClick);
  
         }
         private void handleConfirmClick(object sender, EventArgs e) 
