@@ -18,6 +18,7 @@ namespace Views
     public class FuncionarioUpdate : BaseForm
     {
         public delegate void HandleButton(object sender, EventArgs e);
+        Form parent;
         Label lblId;
         TextBox textId;
         Label lblNome;
@@ -29,8 +30,11 @@ namespace Views
         Button btnConfirm1;
         Button btnCancel1;
 
-        public FuncionarioUpdate() : base("Alterar Funcionário")
+        public FuncionarioUpdate(FuncionarioMenu parent) : base("Alterar Funcionário")
         {
+
+            this.parent = parent;
+            this.parent.Hide();
 
             this.lblId = new Label();
             this.lblId.Text = " Id: ";
@@ -106,7 +110,7 @@ namespace Views
                 );
 
                 MessageBox.Show("Dados alterados com sucesso.");
-                FuncionarioMenu menu = new FuncionarioMenu();
+                this.parent.Show();
                 this.Close();
 
             }
@@ -118,8 +122,8 @@ namespace Views
         
         private void handleCancelClick(object sender, EventArgs e)
         {
-            //Views.AdminMenu menu = new AdminMenu();
-            //this.Close();
+            this.parent.Show();
+            this.Close(); 
         }  
     }       
 }
