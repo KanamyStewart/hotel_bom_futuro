@@ -11,11 +11,14 @@ namespace Views
 {
     public class ReservaList : BaseForm
     {
-       
+        Form parent;
         readonly Button btnVoltar;
         internal static readonly object listReservas;
-        public ReservaList() : base(" Menu Reservas")
+        public ReservaList(AdminMenu parent) : base(" Menu Reservas")
         {
+            this.parent = parent;
+            this.parent.Hide();
+
             ListView listView = new ListView
             {
                 Dock = DockStyle.Fill,
@@ -82,8 +85,8 @@ namespace Views
 
         private void handleVoltarClik(object sender, EventArgs e)
         {
-            Menu  menu = new Menu();
-            this.Close();       
+            this.parent.Show();
+            this.Close();     
         }  
     }           
 }
