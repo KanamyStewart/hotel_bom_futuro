@@ -40,7 +40,7 @@ namespace Views
             btnExcluir = new ButtonForm("Excluir", 200, 220, this.handleExcluir);
             btnCancelar = new ButtonForm("Voltar", 200, 260, this.handleCancel);
 
-            //this.LoadInfo();
+            this.LoadInfo();
             this.Controls.Add(listView);
             this.Controls.Add(btnCadastrar);
             this.Controls.Add(btnEditar);
@@ -50,20 +50,20 @@ namespace Views
         }
 
              
-        /*public void LoadInfo()
+        public void LoadInfo()
         {
-            IEnumerable<FormaPagamentoController> formaPagamentos = FormaPagamentoController.SelecionarFormaPagamentos();
+            IEnumerable<FormaPagamento> formaPagamentos = FormaPagamentoController.SelecionarFormaPagamentos();
 
             this.listView.Items.Clear();
-            foreach (FormaPagamentoController item in formaPagamentos)
+            foreach (FormaPagamento item in formaPagamentos)
             {
-                ListViewItem lvItem = new ListViewItem(item.Id.ToString());
+                ListViewItem lvItem = new ListViewItem(item.Nome.ToString());
                 lvItem.SubItems.Add(item.Nome);
                               
                                 
                 this.listView.Items.Add(lvItem);
             }
-        }*/
+        }
 
         private void handleIncluir(object sender, EventArgs e)
         {
@@ -99,7 +99,7 @@ namespace Views
                 if (result == DialogResult.Yes)
                 {
                     FormaPagamentoController.DeletarFormaPagamento(id);
-                    //this.LoadInfo();
+                    this.LoadInfo();
                 }
             }
             else

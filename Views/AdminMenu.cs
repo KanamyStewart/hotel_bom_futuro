@@ -65,14 +65,14 @@ namespace Views
         }
         private void handleRoom(object sender, EventArgs e)
         {
-            //(new Hospede(this)).Show();
-            //this.Hide();
+            (new QuartoMenu(this)).Show();
+            this.Hide();
         }
 
         private void handleCleaning(object sender, EventArgs e)
         {
-            //(new CrudLimpeza(this)).Show();
-            //this.Hide();
+            (new CrudLimpeza(this)).Show();
+            this.Hide();
         }
         private void handleEmploye(object sender, EventArgs e)
         {
