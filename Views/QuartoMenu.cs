@@ -114,7 +114,7 @@ namespace Views
                     QuartoController.ExcluirQuarto(
                         id
                     );
-                    //this.LoadInfo();
+                    this.LoadInfo();
                 }
                 catch (Exception err)
                 {
@@ -128,7 +128,7 @@ namespace Views
         }
         private void handleVoltar(object sender, EventArgs e)
         {
-            //this.parent.Show();
+            this.parent.Show();
             this.Close();
         }
     }

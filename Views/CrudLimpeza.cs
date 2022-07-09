@@ -53,10 +53,10 @@ namespace Views
 
         /*public void LoadInfo()
         {
-            IEnumerable<LimpezaController> limpezas = LimpezaController.SelecionarLimpezas();
+            IEnumerable<Limpeza> limpezas = LimpezaController.SelecionarLimpezas();
 
             this.listView.Items.Clear();
-            foreach (LimpezaController item in limpezas)
+            foreach (Limpeza item in limpezas)
             {
                 ListViewItem lvItem = new ListViewItem(item.Id.ToString());
                 lvItem.SubItems.Add(item.Numero);

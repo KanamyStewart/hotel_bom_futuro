@@ -34,17 +34,17 @@ namespace Views
             // Create and initialize column headers for listView1.
             ColumnHeader list0 = new ColumnHeader
             {
-                Text = "Nome",
+                Text = "Id",
                 Width = -2
             };
             ColumnHeader list1 = new ColumnHeader
             {
-                Text = "Função",
+                Text = "Nome",
                 Width = -2
             };
              ColumnHeader list2 = new ColumnHeader
             {
-                Text = "Telefone",
+                Text = "Função",
                 Width = -2
             };
             
